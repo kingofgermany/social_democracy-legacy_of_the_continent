@@ -98,16 +98,6 @@ go-to: rm_main_menu
 
 Wels has been removed as an advisor. The Centrist faction disapproves.
 
-@remove_muller
-title: Remove Müller
-view-if: muller_advisor = 1
-tags: remove_advisor
-on-arrival: muller_advisor = 0; center_dissent += 10; n_advisors -= 1
-go-to: rm_main_menu
-
-Müller has been removed as an advisor. The Centrist faction disapproves.
-
-
 @remove_breitscheid
 title: Remove Breitscheid
 view-if: breitscheid_advisor = 1
@@ -158,6 +148,16 @@ Pfülf has been removed as an advisor. The Reformist faction disapproves.
 
 
 # labor
+
+@remove_ollenhauer
+title: Remove Ollenhauer
+view-if: ollenhauer_advisor = 1
+tags: remove_advisor
+on-arrival: ollenhauer_advisor = 0; labor_dissent += 10; n_advisors -= 1
+go-to: rm_main_menu
+
+Ollenhauer has been removed as an advisor. The Moderate faction disapproves.
+
 
 @remove_leipart
 title: Remove Leipart
@@ -411,18 +411,6 @@ go-to: advisor_menu
 
 Otto Wels is now an advisor.
 
-@add_muller
-title: Hermann Müller
-subtitle: Hermann Müller is the last <span style="color: #c00000;">Social Democratic</span> Chancellor. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Defending Toleration ?]
-is-card: true
-card-image: img/portraits/MüllerHermann.jpg
-tags: center_advisor
-view-if: muller_advisor = 0 and muller_dead = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: muller_advisor = 1; n_advisors += 1; center_dissent -= 7; center_strength += 5
-go-to: advisor_menu
-
-Hermann Müller is now an advisor.
-
 @add_breitscheid
 title: Rudolf Breitscheid
 subtitle: Rudolf Breitscheid comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
@@ -553,6 +541,18 @@ Anna Siemsen is now an advisor.
 
 
 # labor
+
+@add_ollenhauer
+title: Erich Ollenhauer
+subtitle: Hermann Müller was the <span style="color: #c00000;">Social Democratic</span> principal leader of the opposition. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Defending Toleration ?]
+is-card: true
+card-image: img/portraits/MüllerHermann.jpg
+tags: center_advisor
+view-if: ollenhauer_advisor = 0 and muller_dead = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: ollenhauer_advisor = 1; n_advisors += 1; center_dissent -= 7; center_strength += 5
+go-to: advisor_menu
+
+Erich Ollenhauer is now an advisor.
 
 @add_leipart
 title: Theodor Leipart
