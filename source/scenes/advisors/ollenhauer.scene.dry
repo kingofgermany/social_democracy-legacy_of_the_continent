@@ -1,9 +1,9 @@
 title: Erich Ollenhauer
 is-pinned-card: true 
-tags: advisor, centrist
+tags: advisor, labor
 card-image: img/portraits/erich-ollenhauer.jpg
 new-page: true
-view-if: muller_advisor = 1
+view-if: ollenhauer_advisor = 1
 
 = Erich Ollenhauer                                                                                                                        
 
