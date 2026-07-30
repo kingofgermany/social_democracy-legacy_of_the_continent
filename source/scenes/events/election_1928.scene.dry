@@ -1463,7 +1463,7 @@ if (Q.bvp_r) {
     });
 }
 
-if (Q.ldpd_r && !Q.lvp_formed && Q.dvp_exist) {
+if (Q.ldpd_r && Q.dvp_exist && !Q.lvp_formed) {
     data.push({
         "id": "ldpd",
         "legend": "LDPD",
