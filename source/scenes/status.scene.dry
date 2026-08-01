@@ -165,7 +165,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span class="tooltip-text" title="German Citizens' Party" style="color: #62c287;">**DBP**</span>: [+ dbp_relation : relationships +]
 
-[? if not sp_name:<span class="tooltip-text" title="Socialist Party" style="color: #D47B9B;">**SP**</span>?][? if sp_name = "SP":<span class="tooltip-text" title="Socialist Party" style="color: #D47B9B;">**[+ sp_name +]**</span>?][? if sp_name = "PDS":<span class="tooltip-text" title="Party of Democratic Socialism" style="color: #c43987;">**[+ sp_name +]**</span>?]: [+ sp_relation : relationships +] ?]
+[? if not lvp_formed or not sp_name:<span class="tooltip-text" title="Socialist Party" style="color: #D47B9B;">**SP**</span>?][? if sp_name = "SP":<span class="tooltip-text" title="Socialist Party" style="color: #D47B9B;">**[+ sp_name +]**</span>?][? if sp_name = "PDS":<span class="tooltip-text" title="Party of Democratic Socialism" style="color: #c43987;">**[+ sp_name +]**</span>?]: [+ sp_relation : relationships +] ?]
 
 [? if kvp_formed and not dnvp_dvp_formed : <span class="tooltip-text" title="Conservative People's Party" style="color: #0087DC;">**KVP**</span>: [+ kvp_relation : relationships +] ?]
 
@@ -209,7 +209,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if dsu_exist: <span class="tooltip-text" title="German Social Union" style="color: #6A1E1E;">**DSU**</span>: [? if not dsu_alt: Strasserism?][? if dsu_alt: Center Nazism?] ([+ dsu_leader +])?]
 
-[? if not sp_name: UNINITIALIZED ?][? if ddp_name != 0: <span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)" style="color: #7A3C00;">**NSDAP**</span>: National Socialism ([+ nsdap_leader +])?]
+[? if not sp_name: UNINITIALIZED ?][? if sp_name != 0: <span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)" style="color: #7A3C00;">**NSDAP**</span>: National Socialism ([+ nsdap_leader +])?]
 
 [? if nvf_exist: <span class="tooltip-text" title="National People's Front" style="color: #142e20;">**NVF**</span>: Revolutionary Volkism (Röhm)?]
 
