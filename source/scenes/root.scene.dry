@@ -135,6 +135,13 @@ Q.z_leader = "Blücher";
 Q.z_ideology = "Right";
 Q.cvp_ideology = "Moderate";
 Q.stegerwald_path = 0;
+Q.sp_left = 0;
+Q.sp_right = 0;
+Q.sp_name = "SP";
+Q.sp_full_name = "Socialist Party";
+Q.sp_leader = "Koch-Weser";
+Q.sp_ideology = "Moderate"
+Q.sp_cohesion = 15;
 Q.nsdap_leader = "Hitler";
 Q.nsdap_chancellor = "Hitler";
 
