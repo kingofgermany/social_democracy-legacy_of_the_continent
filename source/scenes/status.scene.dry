@@ -165,7 +165,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 <span class="tooltip-text" title="German Citizens' Party" style="color: #62c287;">**DBP**</span>: [+ dbp_relation : relationships +]
 
-[? if not sp_name: [? if not sp_name:<span class="tooltip-text" title="Socialist Party" style="color: #D47B9B;">**SP**</span>?][? if sp_name = "SP":<span class="tooltip-text" title="Socialist Party" style="color: #D47B9B;">**[+ sp_name +]**</span>?][? if sp_name = "PDS":<span class="tooltip-text" title="Party of Democratic Socialism" style="color: #c43987;">**[+ sp_name +]**</span>?]: [+ sp_relation : relationships +] ?]
+[? if not sp_name:<span class="tooltip-text" title="Socialist Party" style="color: #D47B9B;">**SP**</span>?][? if sp_name = "SP":<span class="tooltip-text" title="Socialist Party" style="color: #D47B9B;">**[+ sp_name +]**</span>?][? if sp_name = "PDS":<span class="tooltip-text" title="Party of Democratic Socialism" style="color: #c43987;">**[+ sp_name +]**</span>?]: [+ sp_relation : relationships +] ?]
 
 [? if kvp_formed and not dnvp_dvp_formed : <span class="tooltip-text" title="Conservative People's Party" style="color: #0087DC;">**KVP**</span>: [+ kvp_relation : relationships +] ?]
 
