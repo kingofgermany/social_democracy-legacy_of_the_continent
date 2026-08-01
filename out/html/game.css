@@ -695,7 +695,7 @@ th {
 }
 
 /* Styles for parties */
-.seat.kpd {
+.seat.dbp {
   fill: #700000;
 }
 
@@ -705,16 +705,16 @@ th {
   stroke-width: 1.5px;
 }
 
-.seat.ddp {
-  fill: #D3C24D;
+.seat.sp {
+  fill: #D47B9B;
 }
 
 .seat.z {
   fill: #000;
 }
 
-.seat.bvp {
-  fill: #A2D8E0;
+.seat.csu {
+  fill: #63C3D0;
 }
 
 .seat.ldpd {
@@ -725,8 +725,8 @@ th {
   fill: #909090;
 }
 
-.seat.dnvp {
-  fill: #3E88B3;
+.seat.npd {
+  fill: #d79e2a;
 }
 
 .seat.nsdap {
@@ -775,8 +775,8 @@ th {
   stroke-width: 1.5px;
 }
 
-.seat.dnvp_wholesome {
-  fill: #3E88B3;
+.seat.npd_wholesome {
+  fill: #d79e2a;
   stroke: #000000;
   stroke-width: 1.5px;
 }
