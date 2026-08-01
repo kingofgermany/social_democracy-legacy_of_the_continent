@@ -58,14 +58,14 @@ Reichstag composition:
 <span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**SPD**</span>: [+ spd_r +]%
 [? if sapd_formed and sapd_r > 0: <span class="tooltip-text" title="Socialist Workers' Party of Germany" style="color: #9B0000;">**SAPD**</span>: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
-[? if started: [? if z_party_name != "CVP": <span class="tooltip-text" title="Christian People's Party + Christian Social Union"><span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #63C3D0;">**CSU**</span></span>?][? if z_party_name == "CVP": <span class="tooltip-text" title="Christian People's Party + Bavarian People's Party"><span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #63C3D0;">**CSU**</span></span>?]?][? if not started: <span class="tooltip-text" title="Center Party + Bavarian People's Party"><span style="color: #000000;">**Z**</span> + <span style="color: #63C3D0;">**CSU**</span></span> ?]: [+ z_r +]%
+[? if started: [? if z_party_name != "CVP": <span class="tooltip-text" title="Christian People's Party + Christian Social Union"><span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #63C3D0;">**CSU**</span></span>?][? if z_party_name == "CVP": <span class="tooltip-text" title="Christian People's Party + Christian Social Union"><span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #63C3D0;">**CSU**</span></span>?]?][? if not started: <span class="tooltip-text" title="Christian People's Party + Christian Social Union"><span style="color: #000000;">**CDU**</span> + <span style="color: #63C3D0;">**CSU**</span></span> ?]: [+ z_r +]%
 # 1928: 9, 1930: 5
-[? if not lvp_formed and dvp_exist : <span class="tooltip-text" title="Liberal Democratic Party of Germany" style="color: #ffcc00;">**LDPD**</span>: [+ ldpd_r +]% ?]
+[? if dvp_exist : <span class="tooltip-text" title="Liberal Democratic Party of Germany" style="color: #ffcc00;">**LDPD**</span>: [+ ldpd_r +]% ?]
 # 1928: 10, 1930: 13
 <span class="tooltip-text" title="German Citizens' Party" style="color: #62c287;">**DBP**</span>: [+ dbp_r +]%
 # 1928: 5, 1930: 4 (as DStP)
 [? if lvp_formed: <span class="tooltip-text" title="Liberal People's Party" style="color: #FFCC00;">**LVP**</span>: [+ lvp_r +]% ?]
-[? if (not sp_name) : [? if not sp_name:<span class="tooltip-text" title="Socialist Party" style="color: #D47B9B;">**SP**</span>?][? if sp_name = "SP":<span class="tooltip-text" title="Socialist Party" style="color: #D47B9B;">**[+ sp_name +]**</span>?][? if sp_name = "PDS":<span class="tooltip-text" title="Party of Democratic Socialism" style="color: #c43987;">**[+ sp_name +]**</span>?]: [+ sp_r +]% ?]
+[? if not started: [? if not sp_name:<span class="tooltip-text" title="Socialist Party" style="color: #D47B9B;">**SP**</span>?][? if sp_name = "SP":<span class="tooltip-text" title="Socialist Party" style="color: #D47B9B;">**[+ sp_name +]**</span>?][? if sp_name = "PDS":<span class="tooltip-text" title="Party of Democratic Socialism" style="color: #c43987;">**[+ sp_name +]**</span>?]: [+ sp_r +]% ?]
 # 1928: 9, 1930: 5
 [? if kvp_formed and not dnvp_dvp_formed : <span class="tooltip-text" title="Conservative People's Party" style="color: #0087DC;">**KVP**</span>: [+ kvp_r +]% ?]
 [? if dnvp_dvp_formed: <span class="tooltip-text" title="Free Conserative Party" style="color: #00C0FF;">**FKP**</span>: [+ kvp_r +]% ?]
