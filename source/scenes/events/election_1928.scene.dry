@@ -1724,18 +1724,18 @@ go-to: achievement_check_e
 
 [? if sapd_formed : {!<tr><td><div class="box" style='background-color:#9B0000'> </div> !}SAPD: {!</td><td>!} [+ sapd_votes +]% {!</td><td>!} [+ str_votes_change_sapd +] {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
 
-{!<tr><td><div class="box" style='background-color:#63c489'> </div> !}DBP: {!</td><td>!} [+ dbp_votes +]% {!</td><td>!} [+ str_votes_change_dbp +] {!</td><td>!} [+ dbp_r +]% {!</td><td>!} [+ str_change_dbp +] {!</td></tr>!}
-
 [? if not lvp_formed and not dstp_dnef: {!<tr><td><div class="box" style='background-color:#D47B9B'> </div> !} [+ sp_name +]: {!</td><td>!} [+ sp_votes +]% {!</td><td>!} [+ str_votes_change_sp +] {!</td><td>!} [+ sp_r +]% {!</td><td>!} [+ str_change_sp +] {!</td></tr>!} ?]
 
 [? if lvp_formed and not lvp_dnef: {!<tr><td><div class="box" style='background-color:#FFCC00'> </div> !} LVP: {!</td><td>!} [+ lvp_votes +]% {!</td><td>!} [+ str_votes_change_lvp +] {!</td><td>!} [+ lvp_r +]% {!</td><td>!} [+ str_change_lvp +] {!</td></tr>!} ?]
+
+[? if not lvp_formed and dvp_exist and not dvp_dnef: {!<tr><td><div class="box" style='background-color:#ffcc00'> </div> !} LDPD: {!</td><td>!} [+ ldpd_votes +]% {!</td><td>!} [+ str_votes_change_ldpd +] {!</td><td>!} [+ ldpd_r +]% {!</td><td>!} [+ str_change_ldpd +] {!</td></tr>!} ?]
 
 [? if not z_dnef: {!<tr><td><div class="box" style='background-color:#000'> </div> !} [+ z_party_name +]: {!</td><td>!} [+ z_minus_csu_votes +]% {!</td><td>!} [+ str_votes_change_z +] {!</td><td>!} [+ z_minus_csu_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!} ?]
 
 [? if not z_dnef: {!<tr><td><div class="box" style='background-color:#63C3D0'> </div> !} CSU: {!</td><td>!} [+ csu_votes +]% {!</td><td>!} [+ str_votes_change_csu +] {!</td><td>!} [+ csu_r +]% {!</td><td>!} [+ str_change_csu +] {!</td></tr>!} ?]
 
-[? if not lvp_formed and dvp_exist and not dvp_dnef: {!<tr><td><div class="box" style='background-color:#ffcc00'> </div> !} LDPD: {!</td><td>!} [+ ldpd_votes +]% {!</td><td>!} [+ str_votes_change_ldpd +] {!</td><td>!} [+ ldpd_r +]% {!</td><td>!} [+ str_change_ldpd +] {!</td></tr>!} ?]
- 
+{!<tr><td><div class="box" style='background-color:#63c489'> </div> !}DBP: {!</td><td>!} [+ dbp_votes +]% {!</td><td>!} [+ str_votes_change_dbp +] {!</td><td>!} [+ dbp_r +]% {!</td><td>!} [+ str_change_dbp +] {!</td></tr>!}
+
 [? if not other_dnef: {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_votes +]% {!</td><td>!} [+ str_votes_change_other +] {!</td><td>!} [+ other_r +]% {!</td><td>!} [+ str_change_other +] {!</td></tr>!} ?]
 
 [? if aspd_other: {!<tr><td><div class="box2" style='background-color:#fe9e00'> </div> !} ASPD: {!</td><td>!} [+ aspd_votes +]% {!</td><td>!} [+ str_votes_change_aspd +] {!</td><td>!} [+ aspd_r +]% {!</td><td>!} [+ str_change_aspd +] {!</td></tr>!} ?]
@@ -2349,7 +2349,7 @@ unavailable-subtitle: [? if reformist_strength >= left_strength: Our party refor
 choose-if: left_strength >= reformist_strength and president_ideology != "Right" and president != "Hindenburg"
 on-arrival: in_weimar_coalition_prussia = 0; in_grand_coalition_prussia = 0; in_minority_grand_coalition_prussia = 0; in_popular_front_prussia = 0; in_spd_majority_prussia = 0; in_minority_weimar_coalition_prussia = 0; in_left_front_prussia = 1; prussia_leader = "Rosenfeld"; reichswehr_loyalty -= 0.05; spd_prussia = 1; right_prussia = 0; dbp_goals_seen_prussia = 0; leverage += 5; dbp_relation += 10; z_relation -= 15; sp_relation -= 15; dvp_relation -= 20; lvp_relation -= 20; reformist_dissent += 25; dvp_right += 8; sp_right += 5; sp_cohesion -= 5; lvp_right += 5; prussian_police_loyalty -= 0.1; rfb_militancy += 0.1; rfb_strength += 50; coup_progress += 1; capital_strike_progress += 1; reformist_strength -= 10; left_dissent -= 10; left_strength += 10; prussia_negotiations_dbp_left_trigger = 1;
 
-We have kicked out the <span style="color: #ffcc00;">**DVP**</span> and the other bourgeois parties from the existing Grand Coalition to form a United Left Coalition with the <span style="color: #63c489;">**DBP**</span>. The bourgeois parties are infuriated by our betrayal, and any future coalitions with them may be impossible. The Minister-President position is transferred from Braun to[? if left_split == 1:&nbsp;<span style="color: #9B0000;">**SAPD**</span> member?] Kurt Rosenfeld, who [? if left_split == 0: belongs?][? if left_split == 1: belonged?] to the left faction of the <span style="color: #c00000;">**SPD**</span>, and had a history of defending <span style="color: #63c489;">**DBP**</span> members through his work.
+We have kicked out the <span style="color: #ffcc00;">**LDPD**</span> and the other bourgeois parties from the existing Grand Coalition to form a United Left Coalition with the <span style="color: #63c489;">**DBP**</span>. The bourgeois parties are infuriated by our betrayal, and any future coalitions with them may be impossible. The Minister-President position is transferred from Braun to[? if left_split == 1:&nbsp;<span style="color: #9B0000;">**SAPD**</span> member?] Kurt Rosenfeld, who [? if left_split == 0: belongs?][? if left_split == 1: belonged?] to the left faction of the <span style="color: #c00000;">**SPD**</span>, and had a history of defending <span style="color: #63c489;">**DBP**</span> members through his work.
 
 The right will be more active in resisting our rule considering we are going to rule with the <span style="color: #63c489;">**DBP**</span> on both levels of government. The <span style="color: #63c489;">**DBP**</span> has provided a list of objectives for us to complete in parallel to our federal policies.
 
