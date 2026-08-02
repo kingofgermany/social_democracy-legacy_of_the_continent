@@ -450,7 +450,7 @@ if (Q.dnef_formed) {
     if (Q.kvp_r) Q.kvp_r_last = Q.kvp_r;
     if (Q.dvp_r) Q.dvp_r_last = Q.dvp_r;
     if (Q.z_r) Q.z_r_last = Q.z_r;
-    if (Q.bvp_r) Q.bvp_r_last = Q.bvp_r;
+    if (Q.csu_r) Q.csu_r_last = Q.csu_r;
     if (Q.npd_r) Q.npd_r_last = Q.npd_r;
     if (Q.other_r) Q.other_r_last = Q.other_r;
     if (Q.nvf_r) Q.nvf_r_last = Q.nvf_r;
@@ -494,7 +494,7 @@ if (Q.dnef_formed) {
         if (Q.z_r) {
             Q.dnef_r += Q.z_r;
             Q.z_r = 0;
-            Q.bvp_r = 0;
+            Q.csu_r = 0;
         }
         Q.dnef_votes += Q.z_votes;
     }
@@ -576,65 +576,65 @@ Q.true_other_r = Q.other_r - Q.cnblp_r - Q.wp_r - Q.csvd_r - Q.aspd_r;
 if (!Q.csvd_formed && !Q.aspd_other) Q.true_other_r += Q.csvd_r;
 if (!Q.aspd_other) Q.true_other_r += Q.aspd_r;
 
-if (!Q.bavaria_spd) Q.bvp_votes = Q.z_votes*0.2;
-if (Q.bavaria_spd) Q.bvp_votes = Q.z_votes*0.1;
+if (!Q.bavaria_spd) Q.csu_votes = Q.z_votes*0.2;
+if (Q.bavaria_spd) Q.csu_votes = Q.z_votes*0.1;
 if (Q.election_boycott) {
-    if (!Q.bavaria_spd && Q.z_boycott_efficacy >= 0.74) Q.bvp_votes = Q.z_votes_pre*0.2;
-    if (Q.bavaria_spd && Q.z_boycott_efficacy >= 0.74) Q.bvp_votes = Q.z_votes_pre*0.1;
+    if (!Q.bavaria_spd && Q.z_boycott_efficacy >= 0.74) Q.csu_votes = Q.z_votes_pre*0.2;
+    if (Q.bavaria_spd && Q.z_boycott_efficacy >= 0.74) Q.csu_votes = Q.z_votes_pre*0.1;
 }
-if (Q.bvp_votes > 3.6 && !Q.cvp_formed) {
-    Q.bvp_votes = 3.6;
-} else if (Q.bvp_votes > 3.9 && Q.cvp_formed) {
-    Q.bvp_votes = 3.9;
+if (Q.csu_votes > 3.6 && !Q.cvp_formed) {
+    Q.csu_votes = 3.6;
+} else if (Q.csu_votes > 3.9 && Q.cvp_formed) {
+    Q.csu_votes = 3.9;
 }
-if (!Q.z_dnef) Q.bvp_r = Q.bvp_votes*1.05;
-if (Q.bvp_r > 3.7 && !Q.cvp_formed) {
-    Q.bvp_r = 3.7;
-} else if (Q.bvp_r > 4.0 && Q.cvp_formed) {
-    Q.bvp_r = 4.0;
+if (!Q.z_dnef) Q.csu_r = Q.csu_votes*1.05;
+if (Q.csu_r > 3.7 && !Q.cvp_formed) {
+    Q.csu_r = 3.7;
+} else if (Q.csu_r > 4.0 && Q.cvp_formed) {
+    Q.csu_r = 4.0;
 }
 
-if (!Q.z_dnef) Q.bvp_r = parseFloat(Q.bvp_r.toFixed(1));
-Q.bvp_votes = parseFloat(Q.bvp_votes.toFixed(1));
+if (!Q.z_dnef) Q.csu_r = parseFloat(Q.csu_r.toFixed(1));
+Q.csu_votes = parseFloat(Q.csu_votes.toFixed(1));
 
-Q.z_minus_bvp_votes = parseFloat((Q.z_votes - Q.bvp_votes).toFixed(1));
-Q.z_minus_bvp_r = parseFloat((Q.z_r - Q.bvp_r).toFixed(1));
+Q.z_minus_csu_votes = parseFloat((Q.z_votes - Q.csu_votes).toFixed(1));
+Q.z_minus_csu_r = parseFloat((Q.z_r - Q.csu_r).toFixed(1));
 if (Q.election_boycott && Q.z_boycott_efficacy >= 0.74) {
-    Q.z_minus_bvp_votes = 0;
-    Q.z_minus_bvp_r = 0;
-    Q.z_r = Q.bvp_r;
+    Q.z_minus_csu_votes = 0;
+    Q.z_minus_csu_r = 0;
+    Q.z_r = Q.csu_r;
 }
 
-console.log("z_minus_bvp_votes:", Q.z_minus_bvp_votes);
+console.log("z_minus_csu_votes:", Q.z_minus_csu_votes);
 console.log("pre_previous_z_last_election_votes:", Q.pre_previous_z_last_election_votes);
 
-Q.str_votes_change_bvp = Q.bvp_votes - Q.previous_bvp_last_election_votes;
-var sign2 = Q.str_votes_change_bvp > 0 
+Q.str_votes_change_csu = Q.csu_votes - Q.previous_csu_last_election_votes;
+var sign2 = Q.str_votes_change_csu > 0 
 ? '<img src="img/arrowup.png"> ' 
-: Q.str_votes_change_bvp < 0 
+: Q.str_votes_change_csu < 0 
   ? '<img src="img/arrowdown.png"> ' 
   : '<img src="img/steady.png"> ';
-Q.str_votes_change_bvp = sign2 + Math.abs(Q.str_votes_change_bvp).toFixed(1);
+Q.str_votes_change_csu = sign2 + Math.abs(Q.str_votes_change_csu).toFixed(1);
 
-Q.str_change_bvp = Q.bvp_r - Q.old_bvp_r;
-var sign2 = Q.str_change_bvp > 0 
+Q.str_change_csu = Q.csu_r - Q.old_csu_r;
+var sign2 = Q.str_change_csu > 0 
 ? '<img src="img/arrowup.png"> ' 
-: Q.str_change_bvp < 0 
+: Q.str_change_csu < 0 
   ? '<img src="img/arrowdown.png"> ' 
   : '<img src="img/steady.png"> ';
-Q.str_change_bvp = sign2 + Math.abs(Q.str_change_bvp).toFixed(1);
+Q.str_change_csu = sign2 + Math.abs(Q.str_change_csu).toFixed(1);
 
-if (Q.bvp_r) {
-    Q.pre_previous_z_last_election_votes -= Q.previous_bvp_last_election_votes;
-    Q.old_z_r -= Q.old_bvp_r;
+if (Q.csu_r) {
+    Q.pre_previous_z_last_election_votes -= Q.previous_csu_last_election_votes;
+    Q.old_z_r -= Q.old_csu_r;
 }
-Q.previous_bvp_last_election_votes = Q.bvp_votes;
-Q.old_bvp_r = Q.bvp_r;
+Q.previous_csu_last_election_votes = Q.csu_votes;
+Q.old_csu_r = Q.csu_r;
 
-console.log("z_minus_bvp_votes:", Q.z_minus_bvp_votes);
+console.log("z_minus_csu_votes:", Q.z_minus_csu_votes);
 console.log("pre_previous_z_last_election_votes:", Q.pre_previous_z_last_election_votes);
 
-Q.str_votes_change_z = Q.z_minus_bvp_votes - Q.pre_previous_z_last_election_votes;
+Q.str_votes_change_z = Q.z_minus_csu_votes - Q.pre_previous_z_last_election_votes;
 var sign2 = Q.str_votes_change_z > 0 
 ? '<img src="img/arrowup.png"> ' 
 : Q.str_votes_change_z < 0 
@@ -1700,9 +1700,9 @@ go-to: achievement_check_e
 
 [? if lvp_formed and lvp_dnef: {!<tr><td><div class="box2" style='background-color:#CC9900'> </div> !} LVP: {!</td><td>!} [+ lvp_votes +]% {!</td><td>!} [+ str_votes_change_lvp +] {!</td><td>!} [+ lvp_r +]% {!</td><td>!} [+ str_change_lvp +] {!</td></tr>!} ?]
 
-[? if z_dnef: {!<tr><td><div class="box2" style='background-color:#1A0000'> </div> !} [+ z_party_name +]: {!</td><td>!} [+ z_minus_bvp_votes +]% {!</td><td>!} [+ str_votes_change_z +] {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!} ?]
+[? if z_dnef: {!<tr><td><div class="box2" style='background-color:#1A0000'> </div> !} [+ z_party_name +]: {!</td><td>!} [+ z_minus_csu_votes +]% {!</td><td>!} [+ str_votes_change_z +] {!</td><td>!} [+ z_minus_csu_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!} ?]
 
-[? if z_dnef: {!<tr><td><div class="box2" style='background-color:#7aa7af'> </div> !} BVP: {!</td><td>!} [+ bvp_votes +]% {!</td><td>!} [+ str_votes_change_bvp +] {!</td><td>!} [+ bvp_r +]% {!</td><td>!} [+ str_change_bvp +] {!</td></tr>!} ?]
+[? if z_dnef: {!<tr><td><div class="box2" style='background-color:#7aa7af'> </div> !} CSU: {!</td><td>!} [+ csu_votes +]% {!</td><td>!} [+ str_votes_change_csu +] {!</td><td>!} [+ csu_r +]% {!</td><td>!} [+ str_change_csu +] {!</td></tr>!} ?]
 
 [? if not lvp_formed and dvp_exist and dvp_dnef: {!<tr><td><div class="box2" style='background-color:#AA861F'> </div> !} DVP: {!</td><td>!} [+ dvp_votes +]% {!</td><td>!} [+ str_votes_change_dvp +] {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!} ?]
 
@@ -1954,7 +1954,7 @@ go-to: achievement_check_e
 
 [? if anti_democratic_coalition >= 50 and npd_ideology == "Moderate": Together, the anti-democratic <span style="color: #63c489;">**DBP**</span>, <span style="color: #003755;">**DNF**</span>, and <span style="color: #7A3C00;">**NSDAP**</span> have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
 
-[? if hitler_right_coalition >= 50 and rubicon and hitler_right_coalition_time == time: The <span style="color: #000000;">Center Party</span> and its <span style="color: #A2D8E0;">Bavarian</span> counterpart, together with the <span style="color: #7A3C00;">**NSDAP**</span>, constitute a majority in the Reichstag. This has sparked rumors of a potential parliamentary-backed Black-Brown coalition that could unseat [+ chancellor +]—rumors that are unlikely to materialize, as the ideological gulf between the <span style="color: #7A3C00;">Nazis</span> and the constitutionalist <span style="color: #000000;">Center Party</span> remains vast. ?]
+[? if hitler_right_coalition >= 50 and rubicon and hitler_right_coalition_time == time: The <span style="color: #000000;">Center Party</span> and its <span style="color: #63C3D0;">Bavarian</span> counterpart, together with the <span style="color: #7A3C00;">**NSDAP**</span>, constitute a majority in the Reichstag. This has sparked rumors of a potential parliamentary-backed Black-Brown coalition that could unseat [+ chancellor +]—rumors that are unlikely to materialize, as the ideological gulf between the <span style="color: #7A3C00;">Nazis</span> and the constitutionalist <span style="color: #000000;">Center Party</span> remains vast. ?]
 
 [? if change_nsdap_votes < -2 and rubicon and nsdap_decline_time == time: The <span style="color: #7A3C00;">Nazis</span> have finally declined. Many who once backed the movement as a protest vote never actually wanted them in power, while others have simply stayed home. Disillusioned conservatives and religious voters have drifted back to the conservative and middle parties to their left. Perhaps the <span style="color: #7A3C00;">Nazis</span> have peaked—they cannot win new voters without alienating their existing base. ?]
 
@@ -2042,9 +2042,9 @@ Without the constraints of the parliamentary system, he can do whatever he pleas
 
 @schleicher_left_coalition
 title: Schleicher forms a parliamentary cabinet with the left.
-subtitle: <span style="color: #BFC8CC;">**DNEF**</span> + <span style="color: #c00000;">**SPD**</span>[? if not z_dnef:&nbsp;+ <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span>?][? if not lvp_formed and not dstp_dnef:&nbsp;+ <span style="color: #D47B9B;">**[+ sp_name +]**</span>?][? if lvp_formed and not lvp_dnef:&nbsp;+ <span style="color: #FFCC00;">**LVP**</span>?] ([+ schleicher_left_coalition +]%)
+subtitle: <span style="color: #BFC8CC;">**DNEF**</span> + <span style="color: #c00000;">**SPD**</span>[? if not z_dnef:&nbsp;+ <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #63C3D0;">**CSU**</span>?][? if not lvp_formed and not dstp_dnef:&nbsp;+ <span style="color: #D47B9B;">**[+ sp_name +]**</span>?][? if lvp_formed and not lvp_dnef:&nbsp;+ <span style="color: #FFCC00;">**LVP**</span>?] ([+ schleicher_left_coalition +]%)
 view-if: schleicher_left_coalition >= 50 and chancellor == "Schleicher" and schleicher_time and dnef_formed
-unavailable-subtitle: <span style="color: #BFC8CC;">DNEF</span> + <span style="color: #c00000;">SPD</span>[? if not z_dnef:&nbsp;+ <span style="color: #000000;">[+ z_party_name +]</span> + <span style="color: #A2D8E0;">BVP</span>?][? if not lvp_formed and not dstp_dnef:&nbsp;+ <span style="color: #D47B9B;">[+ sp_name +]</span>?][? if lvp_formed and not lvp_dnef:&nbsp;+ <span style="color: #FFCC00;">LVP</span>?] ([+ schleicher_left_coalition +]%) [? if rubicon: - President Hindenburg will never permit Schleicher to bring <span style="color: #c00000;">socialists</span> into the government, no matter his ulterior motive. ?]
+unavailable-subtitle: <span style="color: #BFC8CC;">DNEF</span> + <span style="color: #c00000;">SPD</span>[? if not z_dnef:&nbsp;+ <span style="color: #000000;">[+ z_party_name +]</span> + <span style="color: #63C3D0;">CSU</span>?][? if not lvp_formed and not dstp_dnef:&nbsp;+ <span style="color: #D47B9B;">[+ sp_name +]</span>?][? if lvp_formed and not lvp_dnef:&nbsp;+ <span style="color: #FFCC00;">LVP</span>?] ([+ schleicher_left_coalition +]%) [? if rubicon: - President Hindenburg will never permit Schleicher to bring <span style="color: #c00000;">socialists</span> into the government, no matter his ulterior motive. ?]
 choose-if: president != "Hindenburg"
 on-arrival: leverage -= 10; leverage += 5 if not lvp_formed; leverage += 5 if z_ideology == "Left"; in_schleicher_left_coalition = 1; spd_in_government = 1; vice_chancellor = "Stegerwald"; prussia_leader = "Goerdeler" if prussia_leader == "Schleicher" or prussia_leader == "Strasser"; foreign_minister_party = "DNEF"; interior_minister_party = "DNEF"; justice_minister_party = "Z"; justice_minister_party = "LVP" if lvp_formed; labor_minister_party = "Z"; reichswehr_minister_party = "DNEF"; economic_minister_party = "DNEF"; finance_minister_party = "DNEF"; agriculture_minister_party = "DNEF"; labor_minister = "Stegerwald"; reichswehr_minister = "Schleicher"; pro_republic += 5; schleicher_spd_influence += 4; hindenburg_angry = -500; schleicher_approval += 2
 
@@ -2052,9 +2052,9 @@ Placeholder
 
 @schleicher_right_coalition
 title: Schleicher forms a parliamentary cabinet with the right.
-subtitle: <span style="color: #BFC8CC;">**DNEF**</span>[? if not z_dnef:&nbsp;+ <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span>?][? if not lvp_formed and not dstp_dnef:&nbsp;+ <span style="color: #D47B9B;">**[+ sp_name +]**</span>?][? if not lvp_formed and dvp_exist and not dvp_dnef:&nbsp;+ <span style="color: #ffcc00;">**DVP**</span>?][? if lvp_formed and not lvp_dnef:&nbsp;+ <span style="color: #FFCC00;">**LVP**</span>?][? if not other_dnef:&nbsp;+ **Others**?][? if kvp_formed and not kvp_dnef:&nbsp;+ <span style="color: #0087DC;">**KVP**</span>?][? if npd_ideology == "Moderate":&nbsp;+ <span style="color: #d79e2a;">**NPD**</span>?][? if dsu_exist:&nbsp;+ <span style="color: #6A1E1E;">**DSU**</span>?] ([+ schleicher_right_coalition +]%)
+subtitle: <span style="color: #BFC8CC;">**DNEF**</span>[? if not z_dnef:&nbsp;+ <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #63C3D0;">**CSU**</span>?][? if not lvp_formed and not dstp_dnef:&nbsp;+ <span style="color: #D47B9B;">**[+ sp_name +]**</span>?][? if not lvp_formed and dvp_exist and not dvp_dnef:&nbsp;+ <span style="color: #ffcc00;">**DVP**</span>?][? if lvp_formed and not lvp_dnef:&nbsp;+ <span style="color: #FFCC00;">**LVP**</span>?][? if not other_dnef:&nbsp;+ **Others**?][? if kvp_formed and not kvp_dnef:&nbsp;+ <span style="color: #0087DC;">**KVP**</span>?][? if npd_ideology == "Moderate":&nbsp;+ <span style="color: #d79e2a;">**NPD**</span>?][? if dsu_exist:&nbsp;+ <span style="color: #6A1E1E;">**DSU**</span>?] ([+ schleicher_right_coalition +]%)
 view-if: schleicher_right_coalition >= 50 and chancellor == "Schleicher" and schleicher_time and dnef_formed
-unavailable-subtitle: <span style="color: #BFC8CC;">DNEF</span>[? if not z_dnef:&nbsp;+ <span style="color: #000000;">[+ z_party_name +]</span> + <span style="color: #A2D8E0;">BVP</span>?][? if not lvp_formed and not dstp_dnef:&nbsp;+ <span style="color: #D47B9B;">[+ sp_name +]</span>?][? if not lvp_formed and dvp_exist and not dvp_dnef:&nbsp;+ <span style="color: #ffcc00;">DVP</span>?][? if lvp_formed and not lvp_dnef:&nbsp;+ <span style="color: #FFCC00;">LVP</span>?][? if not other_dnef:&nbsp;+ Others?][? if kvp_formed and not kvp_dnef:&nbsp;+ <span style="color: #0087DC;">KVP</span>?][? if npd_ideology == "Moderate":&nbsp;+ <span style="color: #d79e2a;">NPD</span>?][? if dsu_exist:&nbsp;+ <span style="color: #6A1E1E;">DSU</span>?] ([+ schleicher_right_coalition +]%) [? if not schleicher_parliament_trigger: - Schleicher has no interest in leading a coalition backed by parliament, rather than decree. ?]
+unavailable-subtitle: <span style="color: #BFC8CC;">DNEF</span>[? if not z_dnef:&nbsp;+ <span style="color: #000000;">[+ z_party_name +]</span> + <span style="color: #63C3D0;">CSU</span>?][? if not lvp_formed and not dstp_dnef:&nbsp;+ <span style="color: #D47B9B;">[+ sp_name +]</span>?][? if not lvp_formed and dvp_exist and not dvp_dnef:&nbsp;+ <span style="color: #ffcc00;">DVP</span>?][? if lvp_formed and not lvp_dnef:&nbsp;+ <span style="color: #FFCC00;">LVP</span>?][? if not other_dnef:&nbsp;+ Others?][? if kvp_formed and not kvp_dnef:&nbsp;+ <span style="color: #0087DC;">KVP</span>?][? if npd_ideology == "Moderate":&nbsp;+ <span style="color: #d79e2a;">NPD</span>?][? if dsu_exist:&nbsp;+ <span style="color: #6A1E1E;">DSU</span>?] ([+ schleicher_right_coalition +]%) [? if not schleicher_parliament_trigger: - Schleicher has no interest in leading a coalition backed by parliament, rather than decree. ?]
 choose-if: schleicher_parliament_trigger
 on-arrival: in_schleicher_right_coalition = 1; spd_in_government = 0; dsu_in_gov = 1; vice_chancellor = "Strasser"; prussia_leader = "Strasser" if prussia_leader == "Schleicher" or prussia_leader == "Stegerwald"; foreign_minister_party = "DNEF"; interior_minister_party = "DSU"; justice_minister_party = "Z"; justice_minister_party = "LVP" if lvp_formed; labor_minister_party = "Z"; reichswehr_minister_party = "DNEF"; economic_minister_party = "I"; finance_minister_party = "DNEF"; agriculture_minister_party = "DNEF"; labor_minister = "Stegerwald"; reichswehr_minister = "Schleicher"; pro_republic -= 8; schleicher_spd_influence -= 2; schleicher_spd_support -= 4; schleicher_spd_r -= 2; schleicher_approval += 2
 
@@ -2832,7 +2832,7 @@ if (Q.next_reichstag_month > 12) {
 }
 !}
 
-Schleicher has suspended talks with the <span style="color: #6A1E1E;">**DSU**</span> by deliberately creating an impasse over control of the Interior Ministry. In the meantime, the absence of <span style="color: #7A3C00;">Nazis</span> in the cabinet has made it tolerable for the <span style="color: #000000;">Center Party</span> to return to government, with Adam Stegerwald securing the Labor Ministry and the nominal Vice Chancellorship, alongside other members claiming the Transport and Justice portfolios. The <span style="color: #A2D8E0;">**BVP**</span> is also granted the Postal Ministry. [? if z_leader == "Kaas": Schleicher has also secured Ludwig Kaas's backing by promising the immediate negotiation of a <i>Reichskonkordat</i> with the Vatican. ?]
+Schleicher has suspended talks with the <span style="color: #6A1E1E;">**DSU**</span> by deliberately creating an impasse over control of the Interior Ministry. In the meantime, the absence of <span style="color: #7A3C00;">Nazis</span> in the cabinet has made it tolerable for the <span style="color: #000000;">Center Party</span> to return to government, with Adam Stegerwald securing the Labor Ministry and the nominal Vice Chancellorship, alongside other members claiming the Transport and Justice portfolios. The <span style="color: #63C3D0;">**CSU**</span> is also granted the Postal Ministry. [? if z_leader == "Kaas": Schleicher has also secured Ludwig Kaas's backing by promising the immediate negotiation of a <i>Reichskonkordat</i> with the Vatican. ?]
 
 [? if old_prussia_leader == "Schleicher": The Prussian <i>Reichskommissar</i> post is also handed from Schleicher to Goerdeler—a signal that Schleicher has genuinely abandoned Papen's scheme for state centralization, and gestures toward an eventual return to democratic governance once stability is restored. Braun is overjoyed at this, and argues that only a break with Schleicher would change his mind. ?]
 
@@ -3459,7 +3459,7 @@ achievement: grosse_weimarer_koalition
 go-to: weimar_coalition_2
 
 @weimar_coalition_2
-go-to: weimar_spd_lead if (z_leader != "Stegerwald" or (z_leader == "Stegerwald" and (z_r - bvp_r) < 16)) or president_ideology == "Left"; weimar_z_lead if (z_leader == "Stegerwald" and (z_r - bvp_r) >= 16) and president_ideology != "Left"
+go-to: weimar_spd_lead if (z_leader != "Stegerwald" or (z_leader == "Stegerwald" and (z_r - csu_r) < 16)) or president_ideology == "Left"; weimar_z_lead if (z_leader == "Stegerwald" and (z_r - csu_r) >= 16) and president_ideology != "Left"
 
 We have enough votes to form a "<span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition" government consisting of the <span style="color: #c00000;">**SPD**</span>, [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?] and [? if not lvp_formed: <span style="color: #ffcc00;">**Liberal Democratic**</span>?][? if lvp_formed: <span style="color: #FFCC00;">**Liberal People's**</span>?] [? if not lvp_formed: (<span style="color: #ffcc00;">**LDPD**</span>)?][? if lvp_formed: (<span style="color: #FFCC00;">**LVP**</span>)?] parties! This has been our preferred governing coalition since 1919. [? if weimar_coalition < 50: We are able to form a minority coalition, thanks to the toleration of the <span style="color: #63C489;">German-Hanoverian Party</span>. 🙏🙏🙏 ?]
 
@@ -3500,7 +3500,7 @@ view-if: grand_coalition >= 50 and grand_coalition_failed == 0 and dvp_exist and
 choose-if: ((black_thursday_seen == 0 or (black_thursday_seen == 1 and ldpd_ideology != "Right")) or lvp_formed) and president_ideology != "Right" 
 unavailable-subtitle: [? if black_thursday_seen == 1 and ldpd_ideology = "Right": The <span style="color: #ffcc00;">**LDPD**</span> refuses to work with us. ?][? if president_ideology == "Right": - President [+ president +] is fiercely opposed to <span style="color: #c00000;">socialist</span> governance. ?]
 subtitle: <span style="color: #c00000;">**SPD**</span> + <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #63C3D0;">**CSU**</span> + [? if not lvp_formed: <span style="color: #D47B9B;">**[+ sp_name +]**</span> + <span style="color: #ffcc00;">**LDPD**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?] ([+ grand_coalition +]%)
-go-to: grand_coalition_spd_lead if ((n_elections <= 1 and largest_party == "SPD") or (largest_party == "SPD" and spd_r >= 30 and (z_r - bvp_r) < 15) or (largest_party == "SPD" and spd_r >= 35 and (z_r - bvp_r) >= 15) or president_ideology == "Left") and (not bourgeois_parliament or lvp_formed); grand_coalition_z_lead if president_ideology != "Left" and ((n_elections > 1 and spd_r < 30 and (z_r - bvp_r) < 15) or (n_elections > 1 and spd_r < 35 and (z_r - bvp_r) >= 15) or (n_elections <= 1 and largest_party != "SPD")) and (not bourgeois_parliament or lvp_formed); grand_coalition_bourgeois_parliament if bourgeois_parliament and not lvp_formed
+go-to: grand_coalition_spd_lead if ((n_elections <= 1 and largest_party == "SPD") or (largest_party == "SPD" and spd_r >= 30 and (z_r - csu_r) < 15) or (largest_party == "SPD" and spd_r >= 35 and (z_r - csu_r) >= 15) or president_ideology == "Left") and (not bourgeois_parliament or lvp_formed); grand_coalition_z_lead if president_ideology != "Left" and ((n_elections > 1 and spd_r < 30 and (z_r - csu_r) < 15) or (n_elections > 1 and spd_r < 35 and (z_r - csu_r) >= 15) or (n_elections <= 1 and largest_party != "SPD")) and (not bourgeois_parliament or lvp_formed); grand_coalition_bourgeois_parliament if bourgeois_parliament and not lvp_formed
 
 @grand_coalition_bourgeois_parliament
 on-arrival: grand_coalition_failed = 1
