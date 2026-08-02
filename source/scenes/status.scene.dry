@@ -159,7 +159,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if z_party_name != "CVP": <span class="tooltip-text" title="Center Party" style="color: #000000;">**[+ z_party_name +]**</span>?][? if z_party_name == "CVP": <span class="tooltip-text" title="Christian People's Party" style="color: #000000;">**[+ z_party_name +]**</span>?]: [+ z_relation : relationships +]
 
-[? if not lvp_formed and dvp_exist: <span class="tooltip-text" title="Liberal Democratic Party of Germany" style="color: #ffcc00;">**LDPD**</span>: [+ ldpd_relation : relationships +] ?]
+[? if not lvp_formed: <span class="tooltip-text" title="Liberal Democratic Party of Germany" style="color: #ffcc00;">**LDPD**</span>: [+ ldpd_relation : relationships +] ?]
 
 [? if lvp_formed: <span class="tooltip-text" title="Liberal People's Party" style="color: #FFCC00;">**LVP**</span>: [+ lvp_relation : relationships +]?]
 
