@@ -19,7 +19,7 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
         parties = ['spd', 'dbp', 'sp', 'z', 'ldpd', 'npd', 'nsdap', 'other'];
     }
     if (!partyColors) {
-        partyColors = {'spd': '#E3000F', 'kpd': '#63c489', 'sp': '#D47B9B', 'z': '#000', 'ldpd': '#ffcc00', 'npd': '#d79e2a', 'nsdap': '#7A3C00', 'other': '#a0a0a0'};
+        partyColors = {'spd': '#E3000F', 'dbp': '#63c489', 'sp': '#D47B9B', 'z': '#000', 'ldpd': '#ffcc00', 'npd': '#d79e2a', 'nsdap': '#7A3C00', 'other': '#a0a0a0'};
     }
     if (!partyNames) {
         partyNames = {'spd': 'SPD', 'dbp': 'DBP', 'sp': 'SP', 'z': 'Z + CSU', 'ldpd': 'LDPD', 'npd': 'NPD', 'nsdap': 'NSDAP', 'other': 'Others'};
@@ -44,7 +44,7 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
 
       // Declare the x (horizontal position) scale.
       const maxDate = d3.max(dates);
-      const xScale = d3.scaleUtc([new Date(1928, 0), addMonths(maxDate, additionalMonths)], [marginLeft, width - marginRight]);
+      const xScale = d3.scaleUtc([new Date(1958, 0), addMonths(maxDate, additionalMonths)], [marginLeft, width - marginRight]);
 
       var xaxis = d3.axisBottom()
         .tickFormat(d3.timeFormat('%b %Y'))
