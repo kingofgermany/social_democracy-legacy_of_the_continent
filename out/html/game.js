@@ -324,7 +324,83 @@ window.disableGrayMode = function() {
       return bar;
   };
 
+// --- Boombox music player ---
+window._musicPlaylist = [
+    { name: "Wide is my Motherland", src: "music/1987_1989/WideIsMyMotherland.mp3" },
+    { name: "Where does the Motherland Begin?", src: "music/1987_1989/WDTMB.mp3" },
+    { name: "Aviamarch", src: "music/1987_1989/Aviamarch.mp3" },
+    { name: "Farewell of Slavianka", src: "music/1987_1989/Slavianka.mp3" },
+    { name: "Smuglianka", src: "music/1987_1989/Smuglianka.mp3" }
+];
+window._musicIndex = 0;
+window._musicAudio = new Audio();
+window._musicPlaying = false;
 
+window._musicLoadTrack = function(index) {
+    var track = window._musicPlaylist[index];
+    window._musicAudio.src = track.src;
+    var nameEl = document.getElementById('boombox-track-name');
+    if (nameEl) {
+        nameEl.textContent = track.name;
+        nameEl.style.fontSize = '0.7em';
+        // shrink in small steps until the text actually fits its container
+        var attempts = 0;
+        while (nameEl.scrollWidth > nameEl.clientWidth && attempts < 15) {
+            var current = parseFloat(getComputedStyle(nameEl).fontSize);
+            nameEl.style.fontSize = (current - 1) + 'px';
+            attempts++;
+        }
+    }
+};
+
+window._musicPlay = function() {
+    if (!window._musicAudio.src) {
+        window._musicLoadTrack(window._musicIndex);
+    }
+    if (window._musicPlaying) {
+        window._musicAudio.pause();
+        window._musicPlaying = false;
+    } else {
+        window._musicAudio.play();
+        window._musicPlaying = true;
+    }
+    window._musicUpdateUI();
+};
+
+window._musicNext = function() {
+    window._musicIndex = (window._musicIndex + 1) % window._musicPlaylist.length;
+    window._musicLoadTrack(window._musicIndex);
+    if (window._musicPlaying) { window._musicAudio.play(); }
+    window._musicUpdateUI();
+};
+
+window._musicPrev = function() {
+    window._musicIndex = (window._musicIndex - 1 + window._musicPlaylist.length) % window._musicPlaylist.length;
+    window._musicLoadTrack(window._musicIndex);
+    if (window._musicPlaying) { window._musicAudio.play(); }
+    window._musicUpdateUI();
+};
+
+window._musicSetVolume = function(value) {
+    window._musicAudio.volume = value / 100;
+};
+// apply the initial volume on load
+window._musicAudio.volume = 0.7;
+
+window._musicUpdateUI = function() {
+    var playBtn = document.getElementById('boombox-play');
+    var boombox = document.getElementById('boombox');
+    if (playBtn) { playBtn.textContent = window._musicPlaying ? '⏸' : '▶'; }
+    if (boombox) { boombox.classList.toggle('playing', window._musicPlaying); }
+};
+
+// auto-advance to next track when one ends (cycles the playlist automatically)
+window._musicAudio.addEventListener('ended', function() {
+    window._musicNext();
+});
+window._musicAudio.addEventListener('error', function(e) {
+    console.error('Audio error on track', window._musicIndex, window._musicPlaylist[window._musicIndex], window._musicAudio.error);
+});
   window.justLoaded = true;
   window.statusTab = "status";
   window.statusTabRight = "status_right";
