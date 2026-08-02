@@ -332,7 +332,7 @@ Q.socialism_disp = Math.floor(Q.socialism);
 
 <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #63C3D0;">**CSU**</span>: [+ z_votes +]%
 
-[? if not lvp_formed and dvp_exist: <span style="color: #ffcc00;">**LDPD**</span>: [+ ldpd_votes +]% ?]
+<span style="color: #ffcc00;">**LDPD**</span>: [+ ldpd_votes +]%
 
 <span style="color: #62c287;">**DBP**</span>: [+ dbp_votes +]%
 
