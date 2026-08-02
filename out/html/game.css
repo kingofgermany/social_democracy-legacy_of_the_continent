@@ -695,8 +695,8 @@ th {
 }
 
 /* Styles for parties */
-.seat.dbp {
-  fill: #700000;
+.seat.sp {
+  fill: #D47B9B;
 }
 
 .seat.spd {
@@ -705,20 +705,20 @@ th {
   stroke-width: 1.5px;
 }
 
-.seat.sp {
-  fill: #D47B9B;
+.seat.dbp {
+  fill: #63c489;
 }
 
-.seat.z {
-  fill: #000;
+.seat.ldpd {
+  fill: #FFCC00;
 }
 
 .seat.csu {
   fill: #63C3D0;
 }
 
-.seat.ldpd {
-  fill: #FFCC00;
+.seat.z {
+  fill: #000;
 }
 
 .seat.other {
