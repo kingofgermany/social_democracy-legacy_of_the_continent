@@ -124,7 +124,7 @@ Q.moderate_plan_adopted = 0;
 Q.z_relation = 55;
 Q.dbp_relation = 25;
 Q.sp_relation = 35;
-Q.ldpd_relation = 60;
+Q.ldpd_relation = 64;
 // DNVP and NSDAP are invariably hostile
 Q.npd_relation = 5;
 Q.nsdap_relation = 0;
@@ -1228,11 +1228,11 @@ For more information on the politics and government of the German Republic, see 
 - @1928_challenge: Custom Modes
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 5; base_dues = 5; rb_strength = 2500; kpd_relation = 29; z_relation = 54; ldpd_relation = 49; ddp_relation = 65; budget = 5;
+on-arrival: difficulty = -1; resources = 4; dues = 5; base_dues = 5; rb_strength = 2500; dbp_relation = 25; z_relation = 55; ldpd_relation = 64; sp_relation = 35; budget = 5;
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 3; base_dues = 3; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; ldpd_relation = 31; ddp_relation = 50; budget = 3
+on-arrival: difficulty = 1; resources = 0; dues = 3; base_dues = 3; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 55; dbp_relation = 25; ldpd_relation = 64; sp_relation = 35; budget = 3
 go-to: 1928_main
 
 @1928_historical
@@ -1250,7 +1250,7 @@ Q.labor_dissent = 25;
 Q.center_dissent = 25;
 Q.z_relation = 55;
 Q.dbp_relation = 25;
-Q.ldpd_relation = 60;
+Q.ldpd_relation = 64;
 Q.sp_relation = 35;
 Q.sp_left = 0;
 Q.sp_right = 0;
@@ -1275,7 +1275,7 @@ Q.base_dues = 3;
 Q.rb_strength = 2000;
 Q.z_relation = 55;
 Q.dbp_relation = 25;
-Q.ldpd_relation = 60;
+Q.ldpd_relation = 64;
 Q.sp_relation = 35;
 Q.sp_left = 0;
 Q.sp_right = 0;
@@ -1298,7 +1298,7 @@ Q.base_dues = 3;
 Q.rb_strength = 2000;
 Q.z_relation = 55;
 Q.dbp_relation = 25;
-Q.ldpd_relation = 60;
+Q.ldpd_relation = 64;
 Q.sp_relation = 35;
 Q.sp_left = 0;
 Q.sp_right = 0;
