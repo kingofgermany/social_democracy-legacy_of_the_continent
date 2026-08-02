@@ -60,7 +60,7 @@ Reichstag composition:
 # 1928: 15, 1930: 15, 1932: 
 [? if started: [? if z_party_name != "CVP": <span class="tooltip-text" title="Christian People's Party + Christian Social Union"><span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #63C3D0;">**CSU**</span></span>?][? if z_party_name == "CVP": <span class="tooltip-text" title="Christian People's Party + Christian Social Union"><span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #63C3D0;">**CSU**</span></span>?]?][? if not started: <span class="tooltip-text" title="Christian People's Party + Christian Social Union"><span style="color: #000000;">**CVP**</span> + <span style="color: #63C3D0;">**CSU**</span></span> ?]: [+ z_r +]%
 # 1928: 9, 1930: 5
-[? if dvp_exist : <span class="tooltip-text" title="Liberal Democratic Party of Germany" style="color: #ffcc00;">**LDPD**</span>: [+ ldpd_r +]% ?]
+<span class="tooltip-text" title="Liberal Democratic Party of Germany" style="color: #ffcc00;">**LDPD**</span>: [+ ldpd_r +]%
 # 1928: 10, 1930: 13
 <span class="tooltip-text" title="German Citizens' Party" style="color: #62c287;">**DBP**</span>: [+ dbp_r +]%
 # 1928: 5, 1930: 4 (as DStP)
