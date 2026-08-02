@@ -326,11 +326,11 @@ window.disableGrayMode = function() {
 
 // --- Boombox music player ---
 window._musicPlaylist = [
-    { name: "Wide is my Motherland", src: "music/1987_1989/WideIsMyMotherland.mp3" },
-    { name: "Where does the Motherland Begin?", src: "music/1987_1989/WDTMB.mp3" },
-    { name: "Aviamarch", src: "music/1987_1989/Aviamarch.mp3" },
-    { name: "Farewell of Slavianka", src: "music/1987_1989/Slavianka.mp3" },
-    { name: "Smuglianka", src: "music/1987_1989/Smuglianka.mp3" }
+    { name: "Frühlingslied", src: "music/1928_1930/FruhlingsliedMendelssohn.mp3" },
+    { name: "Die Gedanken Sind Frei", src: "music/1928_1930/die-gedanken-sind-frei.mp3" },
+    { name: "Liebesfreud", src: "music/1928_1933/liebesfreud.mp3" },
+    { name: "Sozialistenmarsch", src: "music/1928_1933/sozialistenmarsch.mp3" },
+    { name: "Zwei kleine Italiener", src: "music/1928_1933/zwei-kleine-italiener(1).mp3" }
 ];
 window._musicIndex = 0;
 window._musicAudio = new Audio();
