@@ -330,7 +330,8 @@ window._musicPlaylist = [
     { name: "Die Gedanken Sind Frei", src: "music/1928_1930/die-gedanken-sind-frei.mp3" },
     { name: "Liebesfreud", src: "music/1928_1933/liebesfreud.mp3" },
     { name: "Sozialistenmarsch", src: "music/1928_1933/sozialistenmarsch.mp3" },
-    { name: "Zwei kleine Italiener", src: "music/1928_1933/zwei-kleine-italiener(1).mp3" }
+    { name: "Zwei kleine Italiener", src: "music/1928_1933/zwei-kleine-italiener(1).mp3" },
+    { name: "Beiß nicht gleich in jeden Apfel", src: "music/1928_1933/beiss-nicht-gleich-in-jeden-apfel.mp3" }
 ];
 window._musicIndex = 0;
 window._musicAudio = new Audio();
