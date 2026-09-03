@@ -8,7 +8,7 @@ view-if: ollenhauer_advisor = 1
 = Erich Ollenhauer                                                                                                                        
 
 
-<span class="tooltip-wrap">Ollenhauer<span class="tooltip-tip"><img src="img/portraits/erich-ollenhauer.jpg" style="width:100%; display:block; margin:0 auto 4px auto; border:1px solid #999;">Test text.</span></span> is the long-time chairman of the <span style="color: #c00000;">**SPD**</span>, who is widely seen as a man of compromise between the various party wings.
+Ollenhauer is the long-time chairman of the <span style="color: #c00000;">**SPD**</span>, who is widely seen as a man of compromise between the various party wings.
 
 - @clear_agenda
 - @party_discipline
