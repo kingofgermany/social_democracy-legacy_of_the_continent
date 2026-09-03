@@ -105,7 +105,6 @@ on-arrival: resources -= 1; z_relation += 6*(1 - dissent); cvp_left += 1
 It's not exactly easy to get the <span style="color: #000000;">Christians</span> to like us again—but it's not impossible either. We will leverage our connections with their <span style="color: #FF7F00;">Christian Left</span> and Labor factions to lay the groundwork for a potential reconciliation between our two parties.
 
 @socialists
-view-if: not lvp_formed and ldpd_exist
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
