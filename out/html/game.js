@@ -324,6 +324,16 @@ window.disableGrayMode = function() {
       return bar;
   };
 
+// exec scene
+  window._updatePresidentImage = function() {
+    var Q = window.dendryUI.dendryEngine.state.qualities;
+    var map = window._presidentPortraits = {
+        'Heuss': 'img/heuss.jpg',
+        };
+    var p = Q.president || '', psn = String(p).split(' ').pop();
+    Q.president_image = pimg;
+};
+  
 // --- Boombox music player ---
 window._musicPlaylist = [
     { name: "Frühlingslied", src: "music/1928_1930/FruhlingsliedMendelssohn.mp3" },
