@@ -354,7 +354,7 @@ frequency: 1
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
 
-@centrist
+@kanalarbeiter
 subtitle: The glue holding the party together. Reduces faction loyalty decay by 30% for each advisor appointed.
 view-if: n_advisors < 3
 
