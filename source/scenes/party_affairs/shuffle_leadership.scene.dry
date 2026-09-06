@@ -82,9 +82,6 @@ go-to: root
 tags: remove_advisor
 
 
-# kanalarbeiter
-
-
 @remove_hilferding
 title: Remove Hilferding
 view-if: hilferding_advisor = 1
