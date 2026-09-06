@@ -109,7 +109,7 @@ go-to: rm_main_menu
 
 Breitscheid has been removed as an advisor. The Centrist faction disapproves.
 
-# paleorevs
+# reformists
 
 
 @remove_severing
@@ -149,7 +149,7 @@ go-to: rm_main_menu
 Pfülf has been removed as an advisor. The Reformist faction disapproves.
 
 
-# neorev
+# labor
 
 
 @remove_ollenhauer
@@ -199,7 +199,7 @@ go-to: rm_main_menu
 
 Woytinsky has been removed as an advisor. The Labor faction disapproves.
 
-# classical
+# left
 
 @remove_levi
 title: Remove Levi
@@ -249,7 +249,7 @@ Siemsen has been removed as an advisor. The Leftist faction disapproves.
 
 
 
-# social_progressives
+# neorevisionists
 
 @remove_mierendorff
 title: Remove Mierendorff
