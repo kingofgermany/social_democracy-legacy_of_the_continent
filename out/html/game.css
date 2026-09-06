@@ -211,6 +211,34 @@ ul.choices a {
   text-decoration: none;
 }
 
+/* ------------------------------ */
+ul.choices li .option-tooltip {
+  display:none;
+  position:fixed;
+  left:-9999px;
+  top:0;
+  background:#fff;
+  border:2px solid #999;
+  padding:8px 12px;
+  min-width:150px;
+  font-size:0.95em;
+  font-weight:normal;
+  font-style:normal;
+  color:#000;
+  text-align:left;
+  line-height:1.7;
+  white-space:nowrap;
+  z-index:100;
+  box-shadow:2px 2px 6px rgba(0,0,0,0.2);
+  pointer-events:none;
+}
+ul.choices li:not(.unavailable):hover .option-tooltip {
+  display:block;
+}
+
+/* ------------------------------ */
+
+
 blockquote {
   margin: 1em 2em;
 }
