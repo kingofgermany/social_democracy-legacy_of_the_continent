@@ -424,7 +424,7 @@ window._musicAudio.addEventListener('error', function(e) {
   };
 
 document.addEventListener('mousemove', e => {
-    document.querySelectorAll('.mytooltiptext').forEach(el => {
+    document.querySelectorAll('.option-tooltip').forEach(el => {
         el.style.setProperty('--mouse-x', e.clientX + 'px');
         el.style.setProperty('--mouse-y', e.clientY + 'px');
     });
