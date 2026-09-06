@@ -431,6 +431,10 @@ blockquote+blockquote.attribution {
 
 .delete_button {}
 
+ul.pinned-cards:not(.decorated),
+ul.choices:not(.decorated),
+ul.decks:not(.decorated) { visibility: hidden; }
+
 /*
  * Card stuff for dendrynexus
  * 
