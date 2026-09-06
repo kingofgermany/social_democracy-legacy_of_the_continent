@@ -11,7 +11,7 @@ The <span style="color: #d6ccb8;">bourgeois</span> coalition made up of the [? i
 
 While we could have tried to strike up a deal with the <span style="color: #000000;">Christians</span> and the <span style="color: #ffcc00;">Liberals</span>, the party consensus is to let the new elections scheduled for May proceed as expected, where we stand to gain. Until then, the government will continue in a caretaker capacity.
 
-- @good: Great!
+- @good: Great!<span class="option-tooltip" style="--mouse-x; --mouse-y;"><div>Next elections have been set to <span style="color:#700000;">May</span></div></span>
 
 @good
 on-arrival: next_election_month = 5; next_election_time = 5
