@@ -47,7 +47,7 @@ footer {
   color: var(--text-color);
   max-width: 540px;
   margin: 0 auto;
-  overflow: auto;
+  overflow: visible;
 }
 
 #content {
