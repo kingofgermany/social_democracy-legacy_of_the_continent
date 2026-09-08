@@ -1033,6 +1033,12 @@ th {
   fill: #ADC1FD;
 }
 
+#content .tooltip-tip {
+  position: fixed;
+  left: var(--mouse-x, --mouse-y);
+  top: var(--mouse-x, --mouse-y);
+}
+
 .tooltip-text {
     text-decoration: underline;
     text-decoration-style: dotted;
