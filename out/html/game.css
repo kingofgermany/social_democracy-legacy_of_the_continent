@@ -1033,10 +1033,17 @@ th {
   fill: #ADC1FD;
 }
 
+.tooltip-tip,
+.tooltip-tip p {
+  text-indent: 0;
+  margin-left: 0;
+}
+
 #content .tooltip-tip {
-  position: fixed;
-  left: var(--mouse-x, --mouse-y);
-  top: var(--mouse-x, --mouse-y);
+  position: absolute;
+  left: 100%;
+  top: 0%;
+  pointer-events: auto;
 }
 
 .tooltip-text {
