@@ -545,7 +545,7 @@ if (Q.week) Q.last_week_updated = Q.week;
 on-display: {!
 if (!document.getElementById('news_tab')) {
     var button = document.createElement('button');
-    button.style.backgroundColor = 'rgba(255, 0, 0, 0.5)';
+    button.style.backgroundColor = 'rgba(255, 128, 128, 0.5)';
     button.className = 'tab_button';
     button.id = 'news_tab';
     button.textContent = 'View International News';
@@ -562,7 +562,7 @@ if (!document.getElementById('news_tab')) {
         }
     });
     if (hasTextContent) {
-        button.style.backgroundColor = 'rgba(255, 0, 0, 0.5)'; // New color
+        button.style.backgroundColor = 'rgba(255, 128, 128, 0.5)'; // New color
     } else {
         button.style.backgroundColor = 'rgba(255, 0, 0, 0.5)'; // Original color
     }
@@ -1833,7 +1833,7 @@ if (Q.week) Q.last_week_updated = Q.week;
 on-display: {!
 if (!document.getElementById('news_tab')) {
     var button = document.createElement('button');
-    button.style.backgroundColor = 'rgba(255, 0, 0, 0.5)';
+    button.style.backgroundColor = 'rgba(255, 128, 128, 0.5)';
     button.className = 'tab_button';
     button.id = 'news_tab';
     button.textContent = 'View International News';
@@ -1850,7 +1850,7 @@ if (!document.getElementById('news_tab')) {
         }
     });
     if (hasTextContent) {
-        button.style.backgroundColor = 'rgba(255, 0, 0, 0.5)'; // New color
+        button.style.backgroundColor = 'rgba(255, 128, 128, 0.5)'; // New color
     } else {
         button.style.backgroundColor = 'rgba(255, 0, 0, 0.5)'; // Original color
     }
