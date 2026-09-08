@@ -138,11 +138,11 @@ p {
   text-indent: 1em;
 }
 
-p.dnvp {
+p.global {
   display: none;
 }
 
-p.other {
+p.domestic {
   display: block;
 }
 
