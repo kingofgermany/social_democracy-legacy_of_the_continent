@@ -263,8 +263,8 @@ window.disableGrayMode = function() {
       }
   };
   window.toggleNews = function toggleNews() {
-      const elements = document.querySelectorAll('.dnvp');
-      const elements2 = document.querySelectorAll('.other');
+      const elements = document.querySelectorAll('.global');
+      const elements2 = document.querySelectorAll('.domestic');
       const button = document.getElementById('news_tab');
 
       if (!button) {
@@ -275,10 +275,10 @@ window.disableGrayMode = function() {
       elements.forEach(function (element) {
           if (element.style.display !== 'block') {
               element.style.display = 'block';
-              button.innerHTML = "View Other News";
+              button.innerHTML = "View Domestic News";
           } else {
               element.style.display = 'none';
-              button.innerHTML = "View Right-Wing News";
+              button.innerHTML = "View International News";
           }
       });
 
