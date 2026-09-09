@@ -19,7 +19,7 @@ tags: govt_affairs, cabinet
 
 {!<div class="exec-face-card">!}
 
-{!<div class="exec-face-border">!}[? if chancellor == "Blücher": {!<img src="img/portraits/placeholder.jpg"></div>!} ?][? if chancellor == "Ollenhauer": {!<img src="img/portraits/OllenauerErich.jpg"></div>!} ?]
+{!<div class="exec-face-border">!}[? if chancellor == "Blücher": {!<img src="img/portraits/placeholder.jpg"></div>!} ?][? if chancellor == "Ollenhauer": {!<img src="img/portraits/erich-ollenhauer.jpg"></div>!} ?]
 
 {!<div class="exec-face-title">Reichskanzler</div>!}
 [? if chancellor == "Blücher": {!<div class="exec-face-name">Franz Blücher</div>!} ?][? if chancellor == "Ollenhauer": {!<div class="exec-face-name">Erich Ollenhauer</div>!} ?]
