@@ -9,14 +9,21 @@ tags: govt_affairs, cabinet
 
 {!<div class="exec-face-row">!} 
 
-{!<div class="exec-face-card">!}{!<div class="exec-face-border">!}[? if president == "Heuss": {!<img src="img/portraits/heuss.jpg"></div>!} ?]
+{!<div class="exec-face-card">!}
+
+{!<div class="exec-face-border">!}[? if president == "Heuss": {!<img src="img/portraits/heuss.jpg"></div>!} ?]
 
 {!<div class="exec-face-title">Reichspräsident</div>!}
 [? if president == "Heuss": {!<div class="exec-face-name">Theodor Heuss</div>!} ?]
 [? if president == "Heuss": {!<div class="exec-face-party">(<span style="color:#ffcc00;font-weight:bold;">LDPD</span>)</div>!} ?]{!<div>!} 
 
 
-{!<div class="exec-face-card">!}{!<div class="exec-face-border">!}[? if chancellor == "Blücher": {!<img src="img/portraits/placeholder.jpg"></div>!} ?]
+
+
+
+{!<div class="exec-face-card">!}
+
+{!<div class="exec-face-border">!}[? if chancellor == "Blücher": {!<img src="img/portraits/placeholder.jpg"></div>!} ?]
 
 {!<div class="exec-face-title">Reichskanzler</div>!}
 [? if chancellor == "Blücher": {!<div class="exec-face-name">Franz Blücher</div>!} ?]
