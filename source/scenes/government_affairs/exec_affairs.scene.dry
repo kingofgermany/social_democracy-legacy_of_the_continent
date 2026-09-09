@@ -19,11 +19,11 @@ tags: govt_affairs, cabinet
 
 {!<div class="exec-face-card">!}
 
-{!<div class="exec-face-border">!}[? if chancellor == "Blücher": {!<img src="img/portraits/placeholder.jpg"></div>!} ?]
+{!<div class="exec-face-border">!}[? if chancellor == "Blücher": {!<img src="img/portraits/placeholder.jpg"></div>!} ?][? if chancellor == "Müller": {!<img src="img/portraits/MüllerHermann.jpg"></div>!} ?]
 
 {!<div class="exec-face-title">Reichskanzler</div>!}
-[? if chancellor == "Blücher": {!<div class="exec-face-name">Franz Blücher</div>!} ?]
-[? if chancellor == "Blücher": {!<div class="exec-face-party">(<span style="color:#000000;font-weight:bold;">CVP</span>)</div>!} ?]{!</div>!}
+[? if chancellor == "Blücher": {!<div class="exec-face-name">Franz Blücher</div>!} ?][? if chancellor == "Müller": {!<div class="exec-face-name">Hermann Müller</div>!} ?]
+[? if chancellor == "Blücher": {!<div class="exec-face-party">(<span style="color:#000000;font-weight:bold;">CVP</span>)</div>!} ?][? if chancellor == "Müller": {!<div class="exec-face-party">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?]{!</div>!}
 
 {!</div>!}
 
