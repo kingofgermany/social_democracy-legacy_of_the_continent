@@ -41,11 +41,16 @@ go-to: menu
 
 {!<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:6px 0;">!}
 
-<span style="font-weight:bold;">Reichskanzler</span>
-<span style="font-style:italic;font-size:0.85em;">Chancellor</span>
+{!<div style="font-weight:bold;">Reichskanzler!}
+{!<div style="font-style:italic;font-size:0.85em;">Chancellor!}
+<span </span>
+
+{!<div style="text-align:right;font-weight:bold;">Erich Ollenhauer!}
+{!<div style="text-align:right;">Erich Ollenhauer!}
+
 
 <span style="text-align:right;font-weight:bold;">Erich Ollenhauer</span>
-<span style="text-align:right;"(<span style="color:#c00000;font-weight:bold;">SPD</span>)</span>
+<span style="text-align:right;">(<span style="color: #c00000;"><strong>SPD</strong></span>)</span>
 
 - @back: Return to main
 
