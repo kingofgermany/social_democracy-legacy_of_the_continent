@@ -1,5 +1,6 @@
 title: Executive Affairs
 new-page: true
+is-pinned-card: true
 is-card: true
 card-image: img/reichstag_2.jpg
 view-if: spd_in_government = 1
