@@ -39,7 +39,16 @@ go-to: menu
 
 = Kabinett [+ chancellor +]
 
-text
+{!<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:6px 0;">!}
+
+
+{!<div {!<div </div>!} </div>!}>Reichskanzler<
+{!<div style="font-style:italic;font-size:0.85em;">!}
+{!<div {!<div </div>!} </div>!}>Chancellor<
+
+{!<div style="text-align:right;">!}
+{!<div {!<div </div>!} </div>!}>Erich Ollenhauer<
+{!<div {!<div </div>!} </div>!}>(<span style="color:#000000;font-weight:bold;">CVP</span><
 
 - @back: Return to main
 
