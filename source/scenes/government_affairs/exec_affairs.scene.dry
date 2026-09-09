@@ -1,0 +1,24 @@
+title: Executive Affairs
+new-page: true
+is-card: true
+card-image: img/reichstag_2.jpg
+view-if: spd_in_government = 1
+tags: govt_affairs, cabinet
+
+= Executive Affairs
+
+{!<div class="exec-face-row">!} 
+
+{!<div class="exec-face-card">!}{!<div class="exec-face-border">!}[? if president == "Heuss": {!<img src="img/portraits/heuss.jpg"></div>!} ?]
+
+{!<div class="exec-face-title">Reichspräsident</div>!}
+{!<div class="exec-face-name">[+ president +]</div>!}
+{!<div class="exec-face-party">([? if president == "Heuss": <span style="color:#ffcc00;font-weight:bold;">LDPD ?]</span>)</div>!}
+
+{!<div class="exec-face-card">!}{!<div class="exec-face-border">!}[? if chancellor == "Blücher": {!<img src="img/portraits/placeholder.jpg"></div>!} ?]
+
+{!<div class="exec-face-title">Reichskanzler</div>!}
+{!<div class="exec-face-name">[+ chancellor+]</div>!}
+{!<div class="exec-face-party">([? if chancellor_party == "Z": <span style="color:#000000;font-weight:bold;">CVP ?]</span>)</div!}
+
+- @easy_discard
