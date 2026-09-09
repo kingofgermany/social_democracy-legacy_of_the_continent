@@ -34,19 +34,19 @@ console.log(Q.advisor_1)
 frequency: 1
 go-to: rm_main_menu
 
-The <span style="color: #c00000;">**SPD**</span> is a diverse and <span class="tooltip-text" title="good mod">dynamic</span> party, but its internal divisions cause factional dissent to gradually increase over time. [? if nsdap_votes >= 20: However, the threat posed by the <span style="color: #7A3C00;">**NSDAP**</span> to the Republic has quieted much of the internal bickering. ?]
+The <span style="color: #c00000;">**SPD**</span> is a diverse and <span class="tooltip-text" title="good mod">dynamic</span> party, but its internal divisions cause factional dissent to gradually build if a faction feels neglected in leadership positions.
 
-Appointing individual advisors will boost their respective faction’s loyalty and influence, at the cost of increasing resentment among the sidelined factions. 
+Appointing individual advisors will boost their respective faction's loyalty and influence, at the cost of increasing resentment among the sidelined factions. 
 
-<span class="tooltip-wrap">Classical<span class="tooltip-tip"><strong>Klassische Marxisten</strong><br><i>Classical Marxists</i><strong></strong><br><br> <img src="img/achievement/eiserne_front.png" style="width:50%; display:block; margin:0 auto 4px auto; border:0px solid #999;"><br>The Left is interested in radical, transformative policies and cooperation with the KPD.</span></span> strength: [+ classical_strength : strength +], dissent: [+ classical_dissent : dissent +]
+<span class="tooltip-wrap">Classical<span class="tooltip-tip"><strong>Klassische Marxisten</strong><br><i>Classical Marxists</i><strong></strong><br><br> <img src="img/achievement/eiserne_front.png" style="width: 50px; height: 50px; vertical-align: middle;"> They view Marxism as key to the working class's emancipation. These are the radicals and revolutionaries of the party. <br> Strengths: Idealistic, anti-militarism<br> Weaknesses: Inflexible, confrontational</span></span>
 
-<span class="tooltip-wrap">Kanalarbeiter<span class="tooltip-tip"><strong>Kanalarbeiter</strong><br><i>'Sewer Workers'</i><strong></strong><br><br> <img src="img/achievement/eiserne_front.png" style="width:50%; display:block; margin:0 auto 4px auto; border:0px solid #999;"><br>Labor's goal is economic reform and benefits for organized workers.</span></span> strength: [+ kanalarbeiter_strength : strength +], dissent: [+ kanalarbeiter_dissent : dissent +]
+<span class="tooltip-wrap">Kanalarbeiter<span class="tooltip-tip"><strong>Kanalarbeiter</strong><br><i>'Sewer Workers'</i><strong></strong><br><br> <img src="img/achievement/eiserne_front.png" style="width: 50px; height: 50px; vertical-align: middle;"> They are party organizers focused on the day-to-day activities of political organizing rather than abstract theory. They provide stability and unity within the party. <br>Strengths: Pragmatic, unifying<br> Weaknesses: Conservative, resistant to change</span></span>
 
-<span class="tooltip-wrap">Neorevisionist<span class="tooltip-tip"><strong>Neorevisionisten</strong><br><i>Neorevisionists</i><strong></strong><br><br> <img src="img/ideologies/neorevisionismus.png" style="width:50%; display:block; margin:0 auto 4px auto; border:0px solid #999;"><br>Neorevisionists focus on defending the republic and expanding democracy, supporting new propaganda methods and extra-parliamentary action.</span></span> strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +]
+<span class="tooltip-wrap">Neorevisionist<span class="tooltip-tip"><strong>Neorevisionisten</strong><br><i>Neorevisionists</i><strong></strong><br><br> <img src="img/ideologies/neorevisionismus.png" style="width: 50px; height: 50px; vertical-align: middle;"> They are the labor leaders and union organizers who believe in working within the system to improve workers' conditions. <br>Strengths: Connected to the labor base, pragmatic<br> Weaknesses: Bureaucratic, sometimes opportunistic</span></span>
 
-<span class="tooltip-wrap">Paleorevisionist<span class="tooltip-tip"><strong>Paläorevisionisten</strong><br><i>Paleorevisionists</i><strong></strong><br><br> <img src="img/achievement/eiserne_front.png" style="width:50%; display:block; margin:0 auto 4px auto; border:0px solid #999;"><br>Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.</span></span> strength: [+ paleorevisionist_strength : strength +], dissent: [+ paleorevisionist_dissent : dissent +]
+<span class="tooltip-wrap">Paleorevisionist<span class="tooltip-tip"><strong>Paläorevisionisten</strong><br><i>Paleorevisionists</i><strong></strong><br><br> <img src="img/achievement/eiserne_front.png" style="width: 50px; height: 50px; vertical-align: middle;"> They are the government officials and career politicians who balance revolution and reform. They bridge the gap between the party establishment and more radical wings. <br> Strengths: Experienced, diplomatic<br> Weaknesses: Compromising, sometimes detached from the base</span></span>
 
-[? if social_progressivism: <span class="tooltip-wrap">Social Progressive<span class="tooltip-tip"><strong>Sozialfortschrittlicher / Sofos</strong><br><i>Social Progressives / Sofos</i><strong></strong><br><br> <img src="img/achievement/eiserne_front.png" style="width:50%; display:block; margin:0 auto 4px auto; border:0px solid #999;"><br>The Social Progressives are primarily interested in cultural issues, whilst also supporting labor policies.</span></span> strength: [+ social_progressive_strength : strength +], dissent: [+ social_progressive_dissent : dissent +] ?]
+[? if social_progressivism: <span class="tooltip-wrap">Social Progressive<span class="tooltip-tip"><strong>Sozialfortschrittlicher / Sofos</strong><br><i>Social Progressives / Sofos</i><strong></strong><br><br>A minority wing that advocates for cultural and social liberalism alongside economic socialism. <br>Strengths: Progressive on culture, modern<br>Weaknesses: Alienated from more traditional base, sometimes cosmopolitan</span></span> ?]
 
 @rm_main_menu
 
@@ -169,7 +169,7 @@ tags: remove_advisor
 on-arrival: leipart_advisor = 0; neorev_dissent += 10; n_advisors -= 1
 go-to: rm_main_menu
 
-Leipart has been removed as an advisor. The Labor faction disapproves.
+Leippart has been removed as an advisor. The Labor faction disapproves.
 
 @remove_aufhauser
 title: Remove Aufhäuser
@@ -389,7 +389,7 @@ view-if: n_advisors < 3
 
 @add_hilferding
 title: Rudolf Hilferding
-subtitle: Rudolf Hilferding is an economist and one of our chief Marxist theoreticians. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+subtitle: Rudolf Hilferding is an economist and one of our chief Marxist theoreticians. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Ministry ?]
 is-card: true
 card-image: img/portraits/HilferdingRudolf.jpg
 tags: kanalarbeiter_advisor
@@ -413,7 +413,7 @@ Otto Wels is now an advisor.
 
 @add_breitscheid
 title: Rudolf Breitscheid
-subtitle: Rudolf Breitscheid comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Party Discipline ?]
+subtitle: Rudolf Breitscheid comes from a well-educated background and is one of our foreign policy leaders. {!<br><br>!}[? if difficulty < 0 : Actions - International Relations, Foreign Policy, Emergency Fundraising ?]
 is-card: true
 card-image: img/portraits/BreitscheidRudolf.jpg
 view-if: breitscheid_advisor = 0 and n_advisors < 3
@@ -440,7 +440,7 @@ Carl Severing is now an advisor.
 
 @add_braun
 title: Otto Braun
-subtitle: Otto Braun is the Minister-President of Prussia, and one of the most recognizable and well-known <span style="color: #c00000;">Social Democratic</span> leaders. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark, Negotiating with the Coalition ?]
+subtitle: Otto Braun is the Minister-President of Prussia, and one of the most recognizable and well-known <span style="color: #c00000;">Social Democratic</span> leaders. {!<br><br>!}[? if difficulty < 0 : Actions - Prussian Bulwark ?]
 is-card: true
 card-image: img/portraits/BraunOtto.jpg
 tags: paleorev_advisor
@@ -480,7 +480,7 @@ Antonie Pfülf is now an advisor.
 
 @add_levi
 title: Paul Levi
-subtitle: Paul Levi is a former <span style="color: #700000;">**KPD**</span> leader who was purged for criticizing <span style="color: #700000;">**Communist**</span> policies. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the <span style="color: #700000;">**KPD**</span> ?]
+subtitle: Paul Levi is a former <span style="color: #700000;">**KPD**</span> leader who was purged for criticizing <span style="color: #700000;">**Communist**</span> policies. {!<br><br>!}[? if difficulty < 0 : Actions - Communist Negotiations, Against Toleration, Party Discipline ?]
 is-card: true
 card-image: img/portraits/LeviPaul.jpg
 view-if: levi_advisor = 0 and levi_dead = 0 and n_advisors < 3 and classical_split = 0
@@ -492,7 +492,7 @@ Paul Levi is now an advisor.
 
 @add_sender
 title: Toni Sender
-subtitle: Toni Sender is an anti-war and womens' rights advocate, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Organizing Women, Against Toleration, Addressing the Economic Crisis ?]
+subtitle: Toni Sender is an anti-war and womens' rights advocate, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Left-Center Unity, Organizing Women, Against Toleration, Address the Labor Crisis ?]
 is-card: true
 card-image: img/portraits/SenderToni.jpg
 view-if: sender_advisor = 0 and n_advisors < 3
@@ -504,10 +504,10 @@ Toni Sender is now an advisor.
 
 @add_rosenfeld
 title: Kurt Rosenfeld
-subtitle: Kurt Rosenfeld is a lawyer, anti-militarist activist, and Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Building the Left, Cooperation with the <span style="color: #700000;">**KPD**</span>, Against Toleration ?]
+subtitle: Kurt Rosenfeld is a physician and radical left Reichstag member with ties to both the KPD and SPD. {!<br><br>!}[? if difficulty < 0 : Actions - Healthcare and Welfare, Left-Center Unity ?]
 is-card: true
 card-image: img/portraits/RosenfeldKurt.jpg
-view-if: rosenfeld_advisor = 0 and n_advisors < 3 and classical_split = 0
+view-if: rosenfeld_advisor = 0 and n_advisors < 3
 on-arrival: rosenfeld_advisor = 1; n_advisors += 1; classical_strength += 5; classical_dissent -= 4
 go-to: advisor_menu
 tags: classical_advisor
@@ -516,7 +516,7 @@ Kurt Rosenfeld is now an advisor.
 
 @add_seydewitz
 title: Max Seydewitz
-subtitle: Max Seydewitz is a former leader of the youth wing, current supporter of the classical wing of the <span style="color: #c00000;">**SPD**</span>, and advocates for class struggle. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Class Struggle, Socialist Youth, Against Toleration ?]
+subtitle: Max Seydewitz is a classical Marxist intellectual with ties to both the labor movement and the intellectual community. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Pacifism, Educational Curriculum, Educational Structure ?]
 is-card: true
 card-image: img/portraits/SeydewitzMax.jpg
 view-if: seydewitz_advisor = 0 and n_advisors < 3 and classical_split = 0
@@ -546,7 +546,7 @@ Anna Siemsen is now an advisor.
 title: Erich Ollenhauer
 subtitle: Erich Ollenhauer was the <span style="color: #c00000;">Social Democratic</span> principal leader of the opposition. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Defending Toleration ?]
 is-card: true
-card-image: img/portraits/MüllerHermann.jpg
+card-image: img/portraits/OllenauerErich.jpg
 tags: kanalarbeiter_advisor
 view-if: ollenhauer_advisor = 0 and muller_dead = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: ollenhauer_advisor = 1; n_advisors += 1; neorev_dissent -= 7; neorev_strength += 5
@@ -572,95 +572,91 @@ subtitle: Siegfried Aufhäuser is the leader of the AfA-Bund, the white-collar t
 is-card: true
 card-image: img/portraits/AufhäuserSiegfried.jpg
 tags: neorev_advisor
-view-if: aufhauser_advisor = 0 and n_advisors < 3
+view-if: aufhauser_advisor = 0 and n_advisors < 3 and unions_independent = 0
 on-arrival: aufhauser_advisor = 1; n_advisors += 1; neorev_strength += 5; neorev_dissent -= 8
 go-to: advisor_menu
 
 Siegfried Aufhäuser is now an advisor.
 
-@add_wissell
-title: Rudolf Wissell
-subtitle: Rudolf Wissell is an economist who has been the Labor Minister, and is an advocate for the interests of neorev within the government. {!<br><br>!}[? if difficulty < 0 : Actions - Union-Party Coordination, Labor Rights ?]
-is-card: true
-card-image: img/portraits/WissellRudolf.jpg
-tags: neorev_advisor
-view-if: wissell_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: wissell_advisor = 1; n_advisors += 1; neorev_strength += 3; neorev_dissent -= 4
-go-to: advisor_menu
-
-Rudolf Wissell is now an advisor.
-
-
 @add_woytinsky
 title: Wladimir Woytinsky
-subtitle: Wladimir Woytinsky is a former Russian Menshevik who is now the lead trade union economist. {!<br><br>!}[? if difficulty < 0 : Actions - Addressing the Economic Crisis, Carrying Out the Economic Plan ?]
+subtitle: Wladimir Woytinsky is a Russian socialist economist, now in exile, who has proposed a works creation plan. {!<br><br>!}[? if difficulty < 0 : Actions - Economic Ministry, Adopting the Economic Plan ?]
 is-card: true
 card-image: img/portraits/WoytinskyWladimir.jpg
-tags: neorev_advisor
-view-if: woytinsky_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: woytinsky_advisor = 1; n_advisors += 1; neorev_strength += 3; neorev_dissent -= 4
+view-if: woytinsky_advisor = 0 and year >= 1931 and n_advisors < 3
+on-arrival: woytinsky_advisor = 1; n_advisors += 1; neorev_strength += 5; neorev_dissent -= 8
 go-to: advisor_menu
+tags: neorev_advisor
 
 Wladimir Woytinsky is now an advisor.
 
+@add_wissell
+title: Rudolf Wissell
+subtitle: Rudolf Wissell is a labor organizer and economic theorist who has served as a labor minister. {!<br><br>!}[? if difficulty < 0 : Actions - Economic Ministry, Adopting Economic Plan ?]
+is-card: true
+card-image: img/portraits/WissellRudolf.jpg
+view-if: wissell_advisor = 0 and n_advisors < 3
+on-arrival: wissell_advisor = 1; n_advisors += 1; neorev_strength += 5; neorev_dissent -= 7
+go-to: advisor_menu
+tags: neorev_advisor
 
-# social_progressive leaders
+Rudolf Wissell is now an advisor.
+
+# sofo
 
 @add_mierendorff
 title: Carlo Mierendorff
-subtitle: Carlo Mierendorff is one of the youngest members of the Reichstag, and the originator of the "Neo-Revisionist" movement. He is an anti-Nazi strategist. {!<br><br>!}[? if difficulty < 0 : Actions - Build the <span style="color: #c00000;">Iron</span> <span style="color: #1A1A1A;">Front</span>, Warning About the <span style="color: #7A3C00;">Nazis</span> ?]
+subtitle: Carlo Mierendorff is a younger party member with progressive views on culture and the arts. {!<br><br>!}[? if difficulty < 0 : Actions - Cultural Affairs, Christian Socialism ?]
 is-card: true
 card-image: img/portraits/MierendorffCarlo.jpg
-view-if: mierendorff_advisor = 0 and n_advisors < 3
-on-arrival: mierendorff_advisor = 1; n_advisors += 1; social_progressive_strength += 5; social_progressive_dissent -= 7
+view-if: mierendorff_advisor = 0 and year >= 1930 and n_advisors < 3 and social_progressivism
+on-arrival: mierendorff_advisor = 1; n_advisors += 1; social_progressive_dissent -= 7; social_progressive_strength += 5
 go-to: advisor_menu
 tags: sofo_advisor
 
 Carlo Mierendorff is now an advisor.
 
-@add_schumacher
-title: Kurt Schumacher
-subtitle: Kurt Schumacher is a Great War veteran and energetic speaker for the <span style="color: #c00000;">social-democratic</span> cause, and favors paleorev policies. {!<br><br>!}[? if difficulty < 0 : Actions - Emergency Fundraising, Building the Reichsbanner, Addressing the Economic Crisis ?]
-is-card: true
-card-image: img/portraits/SchumacherKurt.jpg
-tags: sofo_advisor
-view-if: schumacher_advisor = 0 and n_advisors < 3
-on-arrival: schumacher_advisor = 1; n_advisors += 1; social_progressive_strength += 5; social_progressive_dissent -= 4
-go-to: advisor_menu
-
-Kurt Schumacher is now an advisor.
-
 @add_leber
 title: Julius Leber
-subtitle: Julius Leber is a former Reichswehr officer who resigned in opposition to the Kapp coup attempt. {!<br><br>!}[? if difficulty < 0 : Actions - Rally for Democracy, Military Affairs, Building a People's Party ?]
+subtitle: Julius Leber is an outspoken critic of authoritarianism, with progressive social ideas. {!<br><br>!}[? if difficulty < 0 : Actions - Defending Toleration, Cultural Affairs ?]
 is-card: true
 card-image: img/portraits/LeberJulius.jpg
-view-if: leber_advisor = 0 and n_advisors < 3
-on-arrival: leber_advisor = 1; n_advisors += 1; social_progressive_strength += 5; social_progressive_dissent -= 4
+view-if: leber_advisor = 0 and n_advisors < 3 and social_progressivism
+on-arrival: leber_advisor = 1; n_advisors += 1; social_progressive_dissent -= 7; social_progressive_strength += 5
 go-to: advisor_menu
 tags: sofo_advisor
 
 Julius Leber is now an advisor.
 
-# Nonfactional advisors
+@add_schumacher
+title: Kurt Schumacher
+subtitle: Kurt Schumacher is a rising star in the party, known for his anti-Nazi and anti-imperialist rhetoric. {!<br><br>!}[? if difficulty < 0 : Actions - Defending Toleration, Foreign Policy ?]
+is-card: true
+card-image: img/portraits/SchumacherKurt.jpg
+view-if: schumacher_advisor = 0 and year >= 1931 and n_advisors < 3 and social_progressivism
+on-arrival: schumacher_advisor = 1; n_advisors += 1; social_progressive_dissent -= 7; social_progressive_strength += 5
+go-to: advisor_menu
+tags: sofo_advisor
+
+Kurt Schumacher is now an advisor.
 
 @add_wirth
 title: Joseph Wirth
-subtitle: Joseph Wirth is a former member of the <span style="color: #000000;">Center</span>'s classical wing and a former chancellor, known for his ardent <span style="color: #000000;">rep</span><span style="color: #DD0000;">ubl</span><span style="color: #FFCC00;">ican</span> convictions.
+subtitle: Joseph Wirth is a Center Party politician who is close to the SPD and is known for his moderate views. {!<br><br>!}[? if difficulty < 0 : Actions - Coalition Negotiations, Constitutional Reform ?]
 is-card: true
-card-image: img/portraits/wirth.jpg
-view-if: wirth_advisor = 0 and wirth_spd and n_advisors < 3
-on-arrival: wirth_advisor = 1; n_advisors += 1; social_progressive_strength += 5; social_progressive_dissent -= 8
+card-image: img/portraits/WirtJoseph.jpg
+view-if: wirth_advisor = 0 and year >= 1930 and n_advisors < 3 and social_progressivism
+on-arrival: wirth_advisor = 1; n_advisors += 1; social_progressive_dissent -= 7; social_progressive_strength += 5
 go-to: advisor_menu
 tags: sofo_advisor
 
 Joseph Wirth is now an advisor.
 
-# Nonfactional advisors
+# non-factional
 
 @add_baade
 title: Fritz Baade
-subtitle: Fritz Baade is one of the few agricultural policy experts in the <span style="color: #c00000;">**SPD**</span>. {!<br><br>!}[? if difficulty < 0 : Actions - Agricultural Policy, Rural Campaigning, Addressing the Economic Crisis ?]
+subtitle: Fritz Baade is an agrarian economist who advocates for land reform and rural development. {!<br><br>!}[? if difficulty < 0 : Actions - Agrarian Affairs, Land Reform ?]
 is-card: true
 card-image: img/portraits/BaadeFritz.jpg
 view-if: baade_advisor = 0 and n_advisors < 3
@@ -670,12 +666,11 @@ tags: nonfactional_advisor
 
 Fritz Baade is now an advisor.
 
-
 @add_hirschfeld
 title: Magnus Hirschfeld
-subtitle: Magnus Hirschfeld is the founder of the Institut für Sexualwissenschaft and an advocate for the rights of sexual minorities. {!<br><br>!}[? if difficulty < 0 : Actions - Homosexual Rights, Women's Rights, Science Funding ?]
+subtitle: Magnus Hirschfeld is a prominent sexologist and founder of the Institut für Sexualwissenschaft, advocating for sexual reform. {!<br><br>!}[? if difficulty < 0 : Actions - Sexual Reform, Science and Culture ?]
 is-card: true
-card-image: img/portraits/HirschfeldMagnus.jpg
+card-image: img/portraits/hirschfeld.jpg
 view-if: hirschfeld_advisor = 0 and n_advisors < 3
 on-arrival: hirschfeld_advisor = 1; n_advisors += 1
 go-to: advisor_menu
@@ -683,10 +678,21 @@ tags: nonfactional_advisor
 
 Magnus Hirschfeld is now an advisor.
 
+@add_stampfer
+title: Friedrich Stampfer
+subtitle: Friedrich Stampfer is the chief editor of Vorwärts and a key party intellectual. {!<br><br>!}[? if difficulty < 0 : Actions - Party Press, Public Opinion, Against Right-Wing Forces ?]
+is-card: true
+card-image: img/portraits/StampferFriedrich.jpg
+view-if: stampfer_advisor = 0 and not stampfer_killed and n_advisors < 3
+on-arrival: stampfer_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: nonfactional_advisor
+
+Friedrich Stampfer is now an advisor.
 
 @add_radbruch
 title: Gustav Radbruch
-subtitle: Gustav Radbruch is a renowned legal scholar and long-time <span style="color: #c00000;">**SPD**</span> justice minister. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Affairs, Constitutional Reform ?]
+subtitle: Gustav Radbruch is a legal theorist and philosopher serving as a Reichstag member. {!<br><br>!}[? if difficulty < 0 : Actions - Judicial Reform, Constitutional Reform ?]
 is-card: true
 card-image: img/portraits/RadbruchGustav.jpg
 view-if: radbruch_advisor = 0 and n_advisors < 3
@@ -695,16 +701,3 @@ go-to: advisor_menu
 tags: nonfactional_advisor
 
 Gustav Radbruch is now an advisor.
-
-
-@add_stampfer
-title: Friedrich Stampfer
-subtitle: Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party newspaper. {!<br><br>!}[? if difficulty < 0 : Actions - Media, Editorial Line, Cooperation with the <span style="color: #700000;">KPD</span> ?]
-is-card: true
-card-image: img/portraits/StampferFriedrich.jpg
-view-if: stampfer_advisor = 0 and n_advisors < 3 and not stampfer_killed
-on-arrival: stampfer_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: nonfactional_advisor
-
-Friedrich Stampfer is now an advisor.
