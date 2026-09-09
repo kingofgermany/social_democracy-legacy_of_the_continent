@@ -1928,7 +1928,7 @@ go-to: achievement_check_e
 
 [? if not cvp_formed: <span style="color: #c00000;">Social</span>-<span style="color: #000000;">Christian</span> Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #000000;">**[+ z_party_name +]**</span>): [+ social_catholic_coalition +]% ?]
 
-[? if dvp_exist and not cvp_formed: Grand Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #63C3D0;">**CSU**</span> + <span style="color: #ffcc00;">**LDPD**</span>?]): [+ grand_coalition +]% ?]
+[? if dvp_exist and not cvp_formed: Grand Coalition (<span style="color: #c00000;">**SPD**</span> + <span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #63C3D0;">**CSU**</span> + <span style="color: #ffcc00;">**LDPD**</span>): [+ grand_coalition +]% ?]
 
 [? if bourgeois_coalition >= 25 and not kvp_formed: Bourgeois Coalition (<span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #63C3D0;">**CSU**</span> + [? if dvp_exist:&nbsp;+ <span style="color: #ffcc00;">**LDPD**</span>?] + **Others**): [+ bourgeois_coalition +]% ?]
 
