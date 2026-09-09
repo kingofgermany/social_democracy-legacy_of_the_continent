@@ -18,7 +18,7 @@ tags: govt_affairs, cabinet
 {!<div class="exec-face-card">!}{!<div class="exec-face-border">!}[? if chancellor == "Blücher": {!<img src="img/portraits/placeholder.jpg"></div>!} ?]
 
 {!<div class="exec-face-title">Reichskanzler</div>!}
-{!<div class="exec-face-name">[+ chancellor+]</div>!}
+{!<div class="exec-face-name">[+ chancellor +]</div>!}
 {!<div class="exec-face-party">([? if chancellor_party == "Z": <span style="color:#000000;font-weight:bold;">CVP ?]</span>)</div!}
 
 - @easy_discard
