@@ -49,7 +49,7 @@ choose-if: advisor_action_timer <= 0 and spd_in_government = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government: The <span style="color: #c00000;">SPD</span> is not in government. ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 4; sp_relation += 4; ldpd_relation += 2; ldpd_relation += 2 if in_grand_coalition; ldpd_relation += 4; ldpd_left += 0.5 if in_grand_coalition; ldpd_left += 0.5; ldpd_left += 0.25
 
-We have improved our relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?], <span style="color: #D47B9B;">**[+ sp_name +]**</span>[? if dvp_exist:, and <span style="color: #ffcc00;">**LDPD**</span>?]?], and reduced tensions with the coalition.
+We have improved our relations with the [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?], <span style="color: #D47B9B;">**[+ sp_name +]**</span>[? if dvp_exist:, and <span style="color: #ffcc00;">**LDPD**</span>?], and reduced tensions with the coalition.
 
 @toleration
 title: Defending Toleration
