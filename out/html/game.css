@@ -187,10 +187,8 @@ p.game-over {
 }
 .exec-face-row {
     display: flex;
-    flex-wrap: wrap;
     gap: 2em;
     justify-content: center;
-    align-items: center;
     margin-bottom: 2em;
 }
 .exec-face-card {
@@ -999,4 +997,200 @@ th {
   fill: #B86558;
   stroke: #000000;
   stroke-width: 1.5px;
+}
+
+.seat.npd_wholesome {
+  fill: #d79e2a;
+  stroke: #000000;
+  stroke-width: 1.5px;
+}
+
+
+.seat.fkp {
+  fill: #00C0FF;
+}
+
+.seat.farm {
+  fill: #38C538;
+}
+
+.seat.farm2 {
+  fill: #006400;
+}
+
+.seat.farm3 {
+  fill: #7FCEB1;
+}
+
+.seat.farm4 {
+  fill: #11DD11;
+}
+
+.seat.wp {
+  fill: #b8996f;
+}
+
+.seat.vrp {
+  fill: #0075EB;
+}
+
+.seat.aspd {
+  fill: #fe9e00;
+}
+
+.seat.csvd {
+  fill: #8ED8E4;
+}
+
+.seat.vnr {
+  fill: #D3D3A9;
+}
+
+.seat.rdp {
+  fill: #E0B0FF;
+}
+
+.seat.pcf {
+  fill: #88001A;
+}
+
+.seat.pup {
+  fill: #B22222;
+}
+
+.seat.sfio {
+  fill: #ff0000;
+}
+
+.seat.prs {
+  fill: #FF6699;
+}
+
+.seat.rad {
+  fill: #E0B0FF;
+}
+
+.seat.rad2 {
+  fill: #aa4fff;
+}
+
+.seat.ad {
+  fill: #FFBF00;
+}
+
+.seat.pdp {
+  fill: #00CCCC;
+}
+
+.seat.fr {
+  fill: #005ACA;
+}
+
+.seat.fr2 {
+  fill: #ADC1FD;
+}
+
+.tooltip-tip,
+.tooltip-tip p {
+  text-indent: 0;
+  margin-left: 0;
+}
+
+#content .tooltip-tip {
+  position: absolute;
+  left: 100%;
+  top: 0%;
+  pointer-events: auto;
+}
+
+.tooltip-text {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+.tooltip-wrap {
+  position: relative;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  cursor: help;
+}
+.tooltip-tip {
+  visibility: hidden;
+  position: absolute;
+  z-index: 5;
+  width: 200px;
+  max-width: 220px;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  margin-top: 0.4em;
+  padding: 0.4em;
+  font-size: 0.85em;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+  background-color: var(--content-bg-color);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+.tooltip-wrap:hover .tooltip-tip,
+.tooltip-wrap:focus .tooltip-tip {
+  visibility: visible;
+}
+.tooltip-tip img {
+  width: 100%;
+  display: block;
+  margin: 0 auto 4px auto;
+  border: 1px solid #999;
+}
+.pinned-text-description {
+  margin-left: -10px;
+  white-space: nowrap;
+}
+
+.gray-mode span {
+  color: inherit !important;
+}
+
+.achievement_subtitle {
+  font-size: 90%;
+  color: #444;
+  white-space: normal;
+}
+
+.progress-container {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  border: 2px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.flag-block {
+  flex: 1;
+  height: 100%;
+}
+
+.black { background-color: black; }
+.red { background-color: red; }
+.gold { background-color: gold; }
+
+.progress-fill {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0; 
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+.progress-fill .flag-block {
+  flex: 1;
+  height: 100%;
+}
+
+.progress-text {
+  margin-top: 10px;
 }
