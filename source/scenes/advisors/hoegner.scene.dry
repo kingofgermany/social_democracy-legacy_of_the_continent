@@ -1,8 +1,8 @@
 title: Wilhelm Hoegner
 is-pinned-card: true
-tags: advisor, reformist
+tags: advisor, paleorevisionists
 card-image: img/portraits/wilhelm-hoegner.png
-view-if: hilferding_advisor = 1
+view-if: hoegner_advisor = 1
 new-page: true
 #face-image: img/portraits/wilhelm-hoegner.png
 
