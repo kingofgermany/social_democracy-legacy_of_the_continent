@@ -40,10 +40,10 @@ go-to: menu
 = Kabinett [+ chancellor +]
 
 {!<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:6px 0;">!}{!<div style="font-weight:bold;">Reichskanzler!}
-{!<div style="font-style:italic;font-size:0.85em;">Chancellor!}
+{!<div style="font-style:italic;font-size:0.85em;">Chancellor!}{!</div>!}
 
-{!<div style="text-align:right;font-weight:bold;">Erich Ollenhauer!}
-<span style="text-align:right;">(<span style="color: #c00000;"><strong>SPD</strong></span>)</span>
+[? if chancellor == 'Ollenhauer': {!<div style="text-align:right;font-weight:bold;">Erich Ollenhauer!} ?]{!</div>!}
+[? if chancellor_party == 'SPD': {!<div style="text-align:right;">(<span style="color: #c00000;"><strong>SPD</strong></span>)!}
 
 - @back: Return to main
 
