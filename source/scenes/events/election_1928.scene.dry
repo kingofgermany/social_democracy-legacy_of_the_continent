@@ -2979,7 +2979,7 @@ on-arrival: chancellor = "Ollenhauer"
 Erich Ollenhauer has become chancellor of the <span style="color: #c00000;">**SPD**</span> majority.
 
 @wels_majority_chancellor
-view-if: muller_dead = 1
+view-if: ollenhauer_dead = 1
 on-arrival: chancellor = "Wels"
 
 Otto Wels has become chancellor of the <span style="color: #c00000;">**SPD**</span> majority.
@@ -3770,11 +3770,11 @@ unavailable-subtitle: We've promised to forfeit the Chancellorship to the <span 
 on-arrival: spd_in_government = 1; chancellor = "Ollenhauer"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0; leverage += 5 if (in_grand_coalition_prussia and in_grand_coalition)
 go-to: ministries
 
-Müller's appointment as chancellor is approved by all our potential allies.
+Ollenhauer's appointment as chancellor is approved by all our potential allies.
 
 @wels
 title: Otto Wels for Chancellor
-view-if: muller_dead = 1
+view-if: ollenhauer_dead = 1
 subtitle: Otto Wels is a party leader, but can he also be chancellor?
 choose-if: not cvp_chancellor_accepted
 unavailable-subtitle: We've promised to forfeit the Chancellorship to the <span style="color: #000000;">[+ z_party_name +]</span>.
@@ -3796,7 +3796,7 @@ go-to: braun_2 if prussia_leader == "Braun"; braun_4 if prussia_leader != "Braun
 
 The [? if not in_social_liberal_coalition: [? if z_party_name != "CVP": <span style="color: #000000;">Center Party</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]?][? if in_social_liberal_coalition: [? if not lvp_formed: <span style="color: #ffcc00;">**LDPD**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?]?] has significant qualms about appointing Braun as chancellor, given that he is already Minister-President of Prussia. They ask for either more cabinet positions, or for Braun to resign his state government role. The latter is completely unacceptable.
 
-- @muller
+- @ollenhauer
 - @wels
 - @braun_3: Let the [? if not in_social_liberal_coalition: [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]?][? if in_social_liberal_coalition: [? if not lvp_formed: <span style="color: #ffcc00;">**LDPD**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?]?] have their cabinet positions.
 
