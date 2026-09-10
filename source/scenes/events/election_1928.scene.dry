@@ -2957,7 +2957,7 @@ Who should be chancellor?
 
 - @braun_majority_chancellor: Otto Braun for Chancellor.
 - @breitscheid_majority_chancellor: Rudolf Breitscheid for Chancellor.
-- @muller_majority_chancellor: Hermann Müller for Chancellor.
+- @ollenhauer_majority_chancellor: Erich Ollenhauer for Chancellor.
 - @wels_majority_chancellor: Otto Wels for Chancellor.
 
 @braun_majority_chancellor
@@ -2972,11 +2972,11 @@ on-arrival: chancellor = "Breitscheid"
 
 Rudolf Breitscheid has become chancellor of the <span style="color: #c00000;">**SPD**</span> majority.
 
-@muller_majority_chancellor
-view-if: muller_dead = 0
-on-arrival: chancellor = "Müller"
+@ollenhauer_majority_chancellor
+view-if: ollenhauer_dead = 0
+on-arrival: chancellor = "Ollenhauer"
 
-Hermann Müller has become chancellor of the <span style="color: #c00000;">**SPD**</span> majority.
+Erich Ollenhauer has become chancellor of the <span style="color: #c00000;">**SPD**</span> majority.
 
 @wels_majority_chancellor
 view-if: muller_dead = 1
@@ -3170,7 +3170,7 @@ We have enough votes to form a "<span style="color: #c00000;">Social</span>-[? i
 
 Who should be the chancellor?
 
-- @muller
+- @ollenhauer
 - @braun
 - @breitscheid_coalition_chancellor
 - @wels
@@ -3194,7 +3194,7 @@ Who should be the chancellor?
 
 @soc_lib_chancellor_menu
 
-- @muller
+- @ollenhauer
 - @braun
 - @breitscheid_coalition_chancellor
 - @wels
@@ -3413,7 +3413,7 @@ We have somehow convinced the <span style="color: #000000;">**[+ z_party_name +]
 
 Who should be the chancellor?
 
-- @muller
+- @ollenhauer
 - @braun
 - @wels
 - @z_chancellor_cvp
@@ -3467,7 +3467,7 @@ We have enough votes to form a "<span style="color: #000000;">We</span><span sty
 
 Who should be the chancellor?
 
-- @muller
+- @ollenhauer
 - @braun
 - @breitscheid_coalition_chancellor
 - @wels
@@ -3753,7 +3753,7 @@ As expected, the <span style="color: #c00000;">**SPD**</span> is the largest par
 
 Who should be the chancellor?
 
-- @muller
+- @ollenhauer
 - @braun
 - @wels
 - @z_chancellor
@@ -3761,13 +3761,13 @@ Who should be the chancellor?
 - @no_govt
 
 
-@muller
-title: Hermann Müller for Chancellor
-view-if: muller_dead = 0
-subtitle: Müller is popular within the party, and is the preferred candidate of the [? if not in_social_liberal_coalition: [? if z_party_name != "CVP": <span style="color: #000000;">Center</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]?][? if in_social_liberal_coalition: [? if not lvp_formed: <span style="color: #ffcc00;">**LDPD**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?]?] and other parties.
+@ollenhauer
+title: Erich Ollenhauer for Chancellor
+view-if: ollenhauer_dead = 0
+subtitle: Ollenhauer is popular within the party, and is the preferred candidate of the [? if not in_social_liberal_coalition: [? if z_party_name != "CVP": <span style="color: #000000;">**CVP**</span>?][? if z_party_name == "CVP": <span style="color: #000000;">**CVP**</span>?]?][? if in_social_liberal_coalition: [? if not lvp_formed: <span style="color: #ffcc00;">**LDPD**</span>?][? if lvp_formed:<span style="color: #FFCC00;">**LVP**</span>?]?] and other parties.
 choose-if: not cvp_chancellor_accepted
 unavailable-subtitle: We've promised to forfeit the Chancellorship to the <span style="color: #000000;">[+ z_party_name +]</span>.
-on-arrival: spd_in_government = 1; chancellor = "Müller"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0; leverage += 5 if (in_grand_coalition_prussia and in_grand_coalition)
+on-arrival: spd_in_government = 1; chancellor = "Ollenhauer"; chancellor_party = "SPD"; in_grand_coalition = 1 if in_weimar_coalition == 0; leverage += 5 if (in_grand_coalition_prussia and in_grand_coalition)
 go-to: ministries
 
 Müller's appointment as chancellor is approved by all our potential allies.
@@ -3849,7 +3849,7 @@ on-arrival: reformist_dissent += 5; center_dissent += 5; labor_dissent += 5; neo
 
 Are we sure about not participating in government? This will cause significant internal dissent, and will lead to increased distrust from the bourgeois parties. Even debating this option causes internal backlash. In addition, it is possible that the bourgeois and right-wing parties will also be unable to form a coalition government, leading to a regime appointed by President [+ president +].
 
-- @muller
+- @ollenhauer
 - @braun
 - @z_chancellor
 - @no_govt_goals: Yes, we're sure.
