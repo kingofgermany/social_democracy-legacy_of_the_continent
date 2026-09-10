@@ -43,7 +43,7 @@ go-to: menu
 {!<div style="font-style:italic;font-size:0.85em;">Chancellor</div>!}{!</div>!}
 
 {!<div style="text-align:right;">!}[? if chancellor == 'Ollenhauer': <strong>Erich Ollenhauer</strong> ?]
-[? if chancellor_party == "SPD": {!<div (style="color: #c00000;font-weight:bold;">SPD)</div>!} ?]
+[? if chancellor_party == "SPD": {!<div (<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?]
 
 - @back: Return to main
 
