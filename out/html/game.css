@@ -187,20 +187,20 @@ p.game-over {
 }
 .exec-face-row {
     display: flex;
-    gap: 1.44em;
+    gap: 1.05em;
     justify-content: center;
     align-items: center
     margin-bottom: 2em;
 }
 .exec-face-card {
     text-align: center;
-    width: 212px;
+    width: 207px;
 }
 .exec-face-border {
     width: 200px;
     height: 250px;
     margin: 0 auto;
-    border: 6px solid #000;
+    border: 3.5px solid #4a3728;
     background: #f3f3f3;
     overflow: hidden;
     display: flex;
