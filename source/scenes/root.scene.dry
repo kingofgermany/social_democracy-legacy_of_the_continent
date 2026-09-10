@@ -1021,7 +1021,6 @@ for (let i = 0; i <= 100; i++) {
 Q.wels_advisor = 1; // Otto Wels
 // okay I know Arthur Crispien was a leader irl but i couldn't find much interesting about him...
 Q.crispien_advisor = 0; // Arthur Crispien
-Q.hilferding_advisor = 1; // Rudolf Hilferding
 
 // classical advisors
 Q.sender_advisor = 0; // Toni Sender
@@ -1035,6 +1034,7 @@ Q.pfulf_advisor = 0; // Antonie Pfülf
 Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
 // Paleorevisionist advisors
+Q.hoegner_advisor = 1; // Wilhelm Hoegner
 Q.severing_advisor = 0; // Carl Severing
 Q.braun_advisor = 0; // Otto Braun
 Q.juchacz_advisor = 0; // Marie Juchacz
