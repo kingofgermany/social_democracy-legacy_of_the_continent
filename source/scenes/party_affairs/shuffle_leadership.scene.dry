@@ -547,8 +547,8 @@ title: Erich Ollenhauer
 subtitle: Erich Ollenhauer was the <span style="color: #c00000;">Social Democratic</span> principal leader of the opposition. {!<br><br>!}[? if difficulty < 0 : Actions - Negotiating with the Coalition, Defending Toleration ?]
 is-card: true
 card-image: img/portraits/erich-ollenhauer.jpg
-tags: kanalarbeiter_advisor
-view-if: ollenhauer_advisor = 0 and muller_dead = 0 and n_advisors < 3 and centrists_resign = 0
+tags: neorev_advisor
+view-if: ollenhauer_advisor = 0 and ollenhauer_dead = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: ollenhauer_advisor = 1; n_advisors += 1; neorev_dissent -= 7; neorev_strength += 5
 go-to: advisor_menu
 
