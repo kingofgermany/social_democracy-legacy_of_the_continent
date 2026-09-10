@@ -46,16 +46,12 @@ go-to: menu
 [? if chancellor_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?]{!</div>!}
 
 {!<div style="margin-top:6px;">!}{!<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:6px 0;">!}{!<div style="font-weight:bold;">Reichskanzler!}
-{!<div style="font-style:italic;font-size:0.85em;">Chancellor</div>!}{!</div>!}
-
-{!<div style="text-align:right;">!}[? if chancellor == 'Ollenhauer': <strong>Erich Ollenhauer</strong> ?]
+{!<div style="font-style:italic;font-size:0.85em;">Chancellor</div>!}{!</div>!}{!<div style="text-align:right;">!}[? if chancellor == 'Ollenhauer': <strong>Erich Ollenhauer</strong> ?]
 [? if chancellor_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?]
 
 {!<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:6px 0;">!}{!<div style="font-weight:bold;">Reichskanzler!}
-{!<div style="font-style:italic;font-size:0.85em;">Chancellor</div>!}{!</div>!}
-
-{!<div style="text-align:right;">!}[? if chancellor == 'Ollenhauer': <strong>Erich Ollenhauer</strong> ?]
-[? if chancellor_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?]{!</div>}
+{!<div style="font-style:italic;font-size:0.85em;">Chancellor</div>!}{!</div>!}{!<div style="text-align:right;">!}[? if chancellor == 'Ollenhauer': <strong>Erich Ollenhauer</strong> ?]
+[? if chancellor_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?]
 
 - @back: Return to main
 
