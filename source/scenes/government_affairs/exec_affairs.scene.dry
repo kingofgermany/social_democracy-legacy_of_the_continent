@@ -39,15 +39,15 @@ go-to: menu
 
 = Kabinett [+ chancellor +]
 
-{!<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:6px 0;">!}{!<div style="font-weight:bold;">Reichskanzler!}
-{!<div style="font-style:italic;font-size:0.85em;">Chancellor</div>!}{!</div>!}{!<div style="text-align:right;">!}[? if chancellor == 'Ollenhauer': <strong>Erich Ollenhauer</strong> ?]
-[? if chancellor_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?]{!</div>!}{!</div>!}{!<div style="margin-top:6px;">!}{!<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:6px 0;">!}{!<div style="font-weight:bold;">Reichskanzler!}
-{!<div style="font-style:italic;font-size:0.85em;">Chancellor</div>!}{!</div>!}{!<div style="text-align:right;">!}[? if chancellor == 'Ollenhauer': <strong>Erich Ollenhauer</strong> ?]
-[? if chancellor_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?]{!</div>!}{!</div>!}
+{!<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:20px 0;">!}{!<div style="font-weight:bold;">Reichskanzler!}
+{!<div style="font-style:italic;font-size:0.85em;">Chancellor</div>!}{!</div>!}{!<div style="text-align:right;">!}<strong>[+ chancellor +]</strong>
+[? if chancellor_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?]{!</div>!}{!</div>!}{!<div style="margin-top:6px;">!}{!<div style="display:flex;justify-content:space-between;align-items:flex-start;">!}{!<div style="font-weight:bold;">Foreign Affairs!}
+{!<div style="font-style:italic;font-size:0.85em;">Auswärtiges</div>!}{!</div>!}{!<div style="text-align:right;">!}<strong>[+ foreign_minister +]</strong>
+[? if foreign_minister_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?][? if foreign_minister_party == "Z": {!<div style="font-size:0.85em;">(<span style="color:#000000;font-weight:bold;">CVP</span>)</div>!} ?][? if foreign_minister_party == "LDPD": {!<div style="font-size:0.85em;">(<span style="color:#ffcc00;font-weight:bold;">LDPD</span>)</div>!} ?][? if foreign_minister_party == "SP": {!<div style="font-size:0.85em;">(<span style="color:#d47b9b;font-weight:bold;">[+ sp_name +]</span>)</div>!} ?]{!</div>!}{!</div>!}
 
-{!<div style="display:flex;justify-content:space-between;align-items:flex-start;padding:6px 0;">!}{!<div style="font-weight:bold;">Reichskanzler!}
-{!<div style="font-style:italic;font-size:0.85em;">Chancellor</div>!}{!</div>!}{!<div style="text-align:right;">!}[? if chancellor == 'Ollenhauer': <strong>Erich Ollenhauer</strong> ?]
-[? if chancellor_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?]
+{!<div style="display:flex;justify-content:space-between;align-items:flex-start;">!}{!<div style="font-weight:bold;">Interior!}
+{!<div style="font-style:italic;font-size:0.85em;">Inneres</div>!}{!</div>!}{!<div style="text-align:right;">!}<strong>[+ interior_minister +]</strong>
+[? if interior_minister_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?][? if interior_minister_party == "Z": {!<div style="font-size:0.85em;">(<span style="color:#000000;font-weight:bold;">CVP</span>)</div>!} ?][? if interior_minister_party == "LDPD": {!<div style="font-size:0.85em;">(<span style="color:#ffcc00;font-weight:bold;">LDPD</span>)</div>!} ?][? if interior_minister_party == "SP": {!<div style="font-size:0.85em;">(<span style="color:#d47b9b;font-weight:bold;">[+ sp_name +]</span>)</div>!} ?]{!</div>!}{!</div>!}
 
 - @back: Return to main
 
