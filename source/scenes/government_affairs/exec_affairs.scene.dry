@@ -49,6 +49,30 @@ go-to: menu
 {!<div style="font-style:italic;font-size:0.85em;">Inneres</div>!}{!</div>!}{!<div style="text-align:right;">!}<strong>[+ interior_minister +]</strong>
 [? if interior_minister_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?][? if interior_minister_party == "Z": {!<div style="font-size:0.85em;">(<span style="color:#000000;font-weight:bold;">CVP</span>)</div>!} ?][? if interior_minister_party == "LDPD": {!<div style="font-size:0.85em;">(<span style="color:#ffcc00;font-weight:bold;">LDPD</span>)</div>!} ?][? if interior_minister_party == "SP": {!<div style="font-size:0.85em;">(<span style="color:#d47b9b;font-weight:bold;">[+ sp_name +]</span>)</div>!} ?]{!</div>!}{!</div>!}
 
+{!<div style="display:flex;justify-content:space-between;align-items:flex-start;">!}{!<div style="font-weight:bold;">Finance!}
+{!<div style="font-style:italic;font-size:0.85em;">Finanzen</div>!}{!</div>!}{!<div style="text-align:right;">!}<strong>[+ finance_minister +]</strong>
+[? if finance_minister_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?][? if finance_minister_party == "Z": {!<div style="font-size:0.85em;">(<span style="color:#000000;font-weight:bold;">CVP</span>)</div>!} ?][? if finance_minister_party == "LDPD": {!<div style="font-size:0.85em;">(<span style="color:#ffcc00;font-weight:bold;">LDPD</span>)</div>!} ?][? if finance_minister_party == "SP": {!<div style="font-size:0.85em;">(<span style="color:#d47b9b;font-weight:bold;">[+ sp_name +]</span>)</div>!} ?]{!</div>!}{!</div>!}
+
+{!<div style="display:flex;justify-content:space-between;align-items:flex-start;">!}{!<div style="font-weight:bold;">Economic Affairs!}
+{!<div style="font-style:italic;font-size:0.85em;">Wirtschaft</div>!}{!</div>!}{!<div style="text-align:right;">!}<strong>[+ economic_minister +]</strong>
+[? if economic_minister_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?][? if economic_minister_party == "Z": {!<div style="font-size:0.85em;">(<span style="color:#000000;font-weight:bold;">CVP</span>)</div>!} ?][? if economic_minister_party == "LDPD": {!<div style="font-size:0.85em;">(<span style="color:#ffcc00;font-weight:bold;">LDPD</span>)</div>!} ?][? if economic_minister_party == "SP": {!<div style="font-size:0.85em;">(<span style="color:#d47b9b;font-weight:bold;">[+ sp_name +]</span>)</div>!} ?]{!</div>!}{!</div>!}
+
+{!<div style="display:flex;justify-content:space-between;align-items:flex-start;">!}{!<div style="font-weight:bold;">Labor!}
+{!<div style="font-style:italic;font-size:0.85em;">Arbeit</div>!}{!</div>!}{!<div style="text-align:right;">!}<strong>[+ labor_minister +]</strong>
+[? if labor_minister_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?][? if labor_minister_party == "Z": {!<div style="font-size:0.85em;">(<span style="color:#000000;font-weight:bold;">CVP</span>)</div>!} ?][? if labor_minister_party == "LDPD": {!<div style="font-size:0.85em;">(<span style="color:#ffcc00;font-weight:bold;">LDPD</span>)</div>!} ?][? if labor_minister_party == "SP": {!<div style="font-size:0.85em;">(<span style="color:#d47b9b;font-weight:bold;">[+ sp_name +]</span>)</div>!} ?]{!</div>!}{!</div>!}
+
+{!<div style="display:flex;justify-content:space-between;align-items:flex-start;">!}{!<div style="font-weight:bold;">Justice!}
+{!<div style="font-style:italic;font-size:0.85em;">Justiz</div>!}{!</div>!}{!<div style="text-align:right;">!}<strong>[+ justice_minister +]</strong>
+[? if justice_minister_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?][? if justice_minister_party == "Z": {!<div style="font-size:0.85em;">(<span style="color:#000000;font-weight:bold;">CVP</span>)</div>!} ?][? if justice_minister_party == "LDPD": {!<div style="font-size:0.85em;">(<span style="color:#ffcc00;font-weight:bold;">LDPD</span>)</div>!} ?][? if justice_minister_party == "SP": {!<div style="font-size:0.85em;">(<span style="color:#d47b9b;font-weight:bold;">[+ sp_name +]</span>)</div>!} ?]{!</div>!}{!</div>!}
+
+{!<div style="display:flex;justify-content:space-between;align-items:flex-start;">!}{!<div style="font-weight:bold;">Agriculture!}
+{!<div style="font-style:italic;font-size:0.85em;">Landwirtschaft</div>!}{!</div>!}{!<div style="text-align:right;">!}<strong>[+ agriculture_minister +]</strong>
+[? if agriculture_minister_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?][? if agriculture_minister_party == "Z": {!<div style="font-size:0.85em;">(<span style="color:#000000;font-weight:bold;">CVP</span>)</div>!} ?][? if agriculture_minister_party == "LDPD": {!<div style="font-size:0.85em;">(<span style="color:#ffcc00;font-weight:bold;">LDPD</span>)</div>!} ?][? if agriculture_minister_party == "SP": {!<div style="font-size:0.85em;">(<span style="color:#d47b9b;font-weight:bold;">[+ sp_name +]</span>)</div>!} ?]{!</div>!}{!</div>!}
+
+{!<div style="display:flex;justify-content:space-between;align-items:flex-start;">!}{!<div style="font-weight:bold;">Reichswehr!}
+{!<div style="font-style:italic;font-size:0.85em;">Reichswehr</div>!}{!</div>!}{!<div style="text-align:right;">!}<strong>[+ reichswehr_minister +]</strong>
+[? if reichswehr_minister_party == "SPD": {!<div style="font-size:0.85em;">(<span style="color:#c00000;font-weight:bold;">SPD</span>)</div>!} ?][? if reichswehr_minister_party == "Z": {!<div style="font-size:0.85em;">(<span style="color:#000000;font-weight:bold;">CVP</span>)</div>!} ?][? if reichswehr_minister_party == "LDPD": {!<div style="font-size:0.85em;">(<span style="color:#ffcc00;font-weight:bold;">LDPD</span>)</div>!} ?][? if reichswehr_minister_party == "SP": {!<div style="font-size:0.85em;">(<span style="color:#d47b9b;font-weight:bold;">[+ sp_name +]</span>)</div>!} ?]{!</div>!}{!</div>!}
+
 - @back: Return to main
 
 @back
