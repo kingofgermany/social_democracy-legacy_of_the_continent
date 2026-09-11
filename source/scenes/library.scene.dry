@@ -583,44 +583,45 @@ Overall dissent: [+ dissent_percent : dissent +]
 **The Classical Marxists**
 
 Classical Marxists in the <span style="color: #c00000;"><strong>SPD</strong></span> nowadays are a rather broad camp, primarily including  <span style="color: #990000;">orthodox </span><span style="color: #c00000;">Marxists</span> such as the once-dominant <span style="color: #cf2929;"><t>Austromarxists</t></span>, as well as more <span style="color: #7A3C00;"><t>radical </t></span><span style="color: #f0456a;"><t>socialists </t></span><t>who, for one reason or another, are not in the </t><span style="color: #D47B9B;">Socialist Party</span><t>. They support extra-parliamentary action and have historically been </t><span style="color: #005aca;">Euro</span><span style="color: #ffcc00;">sceptic</span>, seeing the Community as an instrument of <span style="color: #808080;">imperialist </span><span style="color: #98C22C;">capitalism</span>.
+
 Strength: [+ classical_strength : strength +]
 
 Dissent: [+ classical_dissent : dissent +]
 
-**Centrists**
+**The <i>Kanalarbeiter</i>**
 
 Centrists in the <span style="color: #c00000;">**SPD**</span> are followers of the doctrine of orthodox <span style="color: #9B0000;">Marxism</span> as expounded by Karl Kautsky and later Rudolf Hilferding. They seek a middle course between reform and revolution, while defending the democratic state.
 
-Strength: [+ center_strength : strength +]
+Strength: [+ kanalarbeiter_strength : strength +]
 
-Dissent: [+ center_dissent : dissent +]
-
-**Labor**
-
-Many <span style="color: #c00000;">**SPD**</span> members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
-
-Strength: [+ labor_strength : strength +]
-
-Dissent: [+ labor_dissent : dissent +]
-
-**Reformists**
-
-Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> and <span style="color: #700000;">left</span>. [? if spd_prussia : They are dominant in the state government of Prussia. ?]
-
-Strength: [+ reformist_strength : strength +]
-
-Dissent: [+ reformist_dissent : dissent +]
-
-@social_progressives
-go-to: menu
+Dissent: [+ kanalarbeiter_dissent : dissent +]
 
 **Neorevisionists**
 
-Neorevisionists focus on defending the republic and expanding democracy, while also expanding the party's base beyond the working class to create a people's party. They support new propaganda methods and extra-parliamentary action in defense of the republic.
+Many <span style="color: #c00000;">**SPD**</span> members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
 
 Strength: [+ neorevisionist_strength : strength +]
 
 Dissent: [+ neorevisionist_dissent : dissent +]
+
+**Paleorevisionists**
+
+Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the <span style="color: #7A3C00;">far</span>-<span style="color: #3E88B3;">right</span> and <span style="color: #700000;">left</span>. [? if spd_prussia : They are dominant in the state government of Prussia. ?]
+
+Strength: [+ paleorevisionist_strength : strength +]
+
+Dissent: [+ paleorevisionist_dissent : dissent +]
+
+@social_progressives
+go-to: menu
+
+**Social Progressives**
+
+Neorevisionists focus on defending the republic and expanding democracy, while also expanding the party's base beyond the working class to create a people's party. They support new propaganda methods and extra-parliamentary action in defense of the republic.
+
+Strength: [+ social_progressive_strength : strength +]
+
+Dissent: [+ social_progressive_dissent : dissent +]
 
 
 @figures
