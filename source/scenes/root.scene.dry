@@ -622,22 +622,32 @@ Q.minority_government = 0;
 // ministries - which parties control the ministries?
 // starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
 // is the agricultural ministry useful at all?
-Q.foreign_minister = 'Stresemann';
-Q.foreign_minister_party = 'LDPD';
-Q.interior_minister = 'von Keudell';
-Q.interior_minister_party = 'DNVP';
-Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'DNVP';
-Q.labor_minister = 'Brauns';
+Q.foreign_minister = 'von Brentano';
+Q.foreign_minister_party = 'Z';
+Q.interior_minister = 'Höcherl';
+Q.interior_minister_party = 'CSU';
+Q.justice_minister = 'Neumayer';
+Q.justice_minister_party = 'LDPD';
+Q.labor_minister = 'Blank';
 Q.labor_minister_party = 'Z';
-Q.reichswehr_minister = 'Groener';
+Q.reichswehr_minister = 'Speidel';
 Q.reichswehr_minister_party = 'I';
-Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'LDPD';
-Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'Z';
-Q.agriculture_minister = 'Schiele';
-Q.agriculture_minister_party = 'DNVP';
+Q.economic_minister = 'Müller-Armack';
+Q.economic_minister_party = 'Z';
+Q.finance_minister = 'Frank';
+Q.finance_minister_party = 'LDPD';
+Q.agriculture_minister = 'Hepp';
+Q.agriculture_minister_party = 'DBP';
+Q.science_minister = 'Balke';
+Q.science_minister_party = 'CSU';
+Q.health_minister = 'Steidle';
+Q.health_minister_party = 'Z';
+Q.social_minister = 'Wuermeling';
+Q.social_minister_party = 'Z';
+Q.transport_minister = 'Seebohm';
+Q.transport_minister_party = 'DBP';
+Q.housing_minister = 'Wildermuth';
+Q.housing_minister_party = 'LDPD';
 
 // Events: what has occurred?
 Q.panzerkreuzer_seen = 0;
