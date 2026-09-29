@@ -327,6 +327,7 @@ window.disableGrayMode = function() {
 // --- Boombox music player ---
 window._musicPlaylist = [
     { name: "Frühlingslied", src: "music/1928_1930/FruhlingsliedMendelssohn.mp3" },
+    { name: "Berliner Luft", src: "music/1928_1930/berliner_luft_1965.mp3" },
     { name: "Die Gedanken Sind Frei", src: "music/1928_1930/die-gedanken-sind-frei.mp3" },
     { name: "Liebesfreud", src: "music/1928_1933/liebesfreud.mp3" },
     { name: "Die Internationale", src: "music/1930_1933/die-internationale.ogg" },
